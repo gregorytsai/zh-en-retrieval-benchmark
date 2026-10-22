@@ -1,0 +1,497 @@
+[
+  {
+    "config": "eng-zho",
+    "embedding": "qwen-0.6b",
+    "reranker": "bge-reranker",
+    "top1_delta_vs_standalone": 0.16,
+    "paired_bootstrap95": [
+      0.07,
+      0.25
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "zho-zho",
+    "embedding": "qwen-0.6b",
+    "reranker": "bge-reranker",
+    "top1_delta_vs_standalone": 0.12,
+    "paired_bootstrap95": [
+      0.05,
+      0.19
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "eng-eng",
+    "embedding": "qwen-0.6b",
+    "reranker": "bge-reranker",
+    "top1_delta_vs_standalone": 0.14,
+    "paired_bootstrap95": [
+      0.06,
+      0.23
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "eng-zho",
+    "embedding": "qwen-4b",
+    "reranker": "bge-reranker",
+    "top1_delta_vs_standalone": 0.08,
+    "paired_bootstrap95": [
+      -0.01,
+      0.17
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "zho-zho",
+    "embedding": "qwen-4b",
+    "reranker": "bge-reranker",
+    "top1_delta_vs_standalone": 0.04,
+    "paired_bootstrap95": [
+      -0.02,
+      0.1
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "eng-eng",
+    "embedding": "qwen-4b",
+    "reranker": "bge-reranker",
+    "top1_delta_vs_standalone": 0.04,
+    "paired_bootstrap95": [
+      -0.030249999999999985,
+      0.12
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "eng-zho",
+    "embedding": "qwen-8b",
+    "reranker": "bge-reranker",
+    "top1_delta_vs_standalone": 0.04,
+    "paired_bootstrap95": [
+      -0.03,
+      0.11
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "zho-zho",
+    "embedding": "qwen-8b",
+    "reranker": "bge-reranker",
+    "top1_delta_vs_standalone": -0.01,
+    "paired_bootstrap95": [
+      -0.06,
+      0.04
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "eng-eng",
+    "embedding": "qwen-8b",
+    "reranker": "bge-reranker",
+    "top1_delta_vs_standalone": 0.05,
+    "paired_bootstrap95": [
+      -0.03,
+      0.13
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "eng-zho",
+    "embedding": "bge-m3",
+    "reranker": "bge-reranker",
+    "top1_delta_vs_standalone": 0.1,
+    "paired_bootstrap95": [
+      0.02,
+      0.19
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "zho-zho",
+    "embedding": "bge-m3",
+    "reranker": "bge-reranker",
+    "top1_delta_vs_standalone": 0.09,
+    "paired_bootstrap95": [
+      0.02,
+      0.17
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "eng-eng",
+    "embedding": "bge-m3",
+    "reranker": "bge-reranker",
+    "top1_delta_vs_standalone": 0.06,
+    "paired_bootstrap95": [
+      -0.02,
+      0.14
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "eng-zho",
+    "embedding": "embeddinggemma-2",
+    "reranker": "bge-reranker",
+    "top1_delta_vs_standalone": 0.11,
+    "paired_bootstrap95": [
+      0.029750000000000013,
+      0.2
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "zho-zho",
+    "embedding": "embeddinggemma-2",
+    "reranker": "bge-reranker",
+    "top1_delta_vs_standalone": 0.09,
+    "paired_bootstrap95": [
+      0.02,
+      0.16024999999999864
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "eng-eng",
+    "embedding": "embeddinggemma-2",
+    "reranker": "bge-reranker",
+    "top1_delta_vs_standalone": 0.11,
+    "paired_bootstrap95": [
+      0.03,
+      0.19
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "eng-zho",
+    "embedding": "qwen-0.6b",
+    "reranker": "qwen-reranker-0.6b",
+    "top1_delta_vs_standalone": 0.13,
+    "paired_bootstrap95": [
+      0.05,
+      0.21
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "zho-zho",
+    "embedding": "qwen-0.6b",
+    "reranker": "qwen-reranker-0.6b",
+    "top1_delta_vs_standalone": 0.13,
+    "paired_bootstrap95": [
+      0.06,
+      0.21
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "eng-eng",
+    "embedding": "qwen-0.6b",
+    "reranker": "qwen-reranker-0.6b",
+    "top1_delta_vs_standalone": 0.18,
+    "paired_bootstrap95": [
+      0.1,
+      0.26024999999999865
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "eng-zho",
+    "embedding": "qwen-4b",
+    "reranker": "qwen-reranker-0.6b",
+    "top1_delta_vs_standalone": 0.07,
+    "paired_bootstrap95": [
+      -0.02,
+      0.16
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "zho-zho",
+    "embedding": "qwen-4b",
+    "reranker": "qwen-reranker-0.6b",
+    "top1_delta_vs_standalone": 0.05,
+    "paired_bootstrap95": [
+      -0.01,
+      0.12
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "eng-eng",
+    "embedding": "qwen-4b",
+    "reranker": "qwen-reranker-0.6b",
+    "top1_delta_vs_standalone": 0.09,
+    "paired_bootstrap95": [
+      0.02,
+      0.16
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "eng-zho",
+    "embedding": "qwen-8b",
+    "reranker": "qwen-reranker-0.6b",
+    "top1_delta_vs_standalone": 0.01,
+    "paired_bootstrap95": [
+      -0.08,
+      0.09
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "zho-zho",
+    "embedding": "qwen-8b",
+    "reranker": "qwen-reranker-0.6b",
+    "top1_delta_vs_standalone": 0.0,
+    "paired_bootstrap95": [
+      -0.04,
+      0.04
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "eng-eng",
+    "embedding": "qwen-8b",
+    "reranker": "qwen-reranker-0.6b",
+    "top1_delta_vs_standalone": 0.1,
+    "paired_bootstrap95": [
+      0.04,
+      0.16
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "eng-zho",
+    "embedding": "bge-m3",
+    "reranker": "qwen-reranker-0.6b",
+    "top1_delta_vs_standalone": 0.1,
+    "paired_bootstrap95": [
+      0.02,
+      0.18
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "zho-zho",
+    "embedding": "bge-m3",
+    "reranker": "qwen-reranker-0.6b",
+    "top1_delta_vs_standalone": 0.12,
+    "paired_bootstrap95": [
+      0.04,
+      0.2
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "eng-eng",
+    "embedding": "bge-m3",
+    "reranker": "qwen-reranker-0.6b",
+    "top1_delta_vs_standalone": 0.12,
+    "paired_bootstrap95": [
+      0.06,
+      0.19
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "eng-zho",
+    "embedding": "embeddinggemma-2",
+    "reranker": "qwen-reranker-0.6b",
+    "top1_delta_vs_standalone": 0.1,
+    "paired_bootstrap95": [
+      0.01,
+      0.19
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "zho-zho",
+    "embedding": "embeddinggemma-2",
+    "reranker": "qwen-reranker-0.6b",
+    "top1_delta_vs_standalone": 0.12,
+    "paired_bootstrap95": [
+      0.06,
+      0.19
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "eng-eng",
+    "embedding": "embeddinggemma-2",
+    "reranker": "qwen-reranker-0.6b",
+    "top1_delta_vs_standalone": 0.16,
+    "paired_bootstrap95": [
+      0.09,
+      0.24
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "eng-zho",
+    "embedding": "qwen-0.6b",
+    "reranker": "qwen-reranker-4b",
+    "top1_delta_vs_standalone": 0.23,
+    "paired_bootstrap95": [
+      0.15,
+      0.31
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "zho-zho",
+    "embedding": "qwen-0.6b",
+    "reranker": "qwen-reranker-4b",
+    "top1_delta_vs_standalone": 0.15,
+    "paired_bootstrap95": [
+      0.08,
+      0.23
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "eng-eng",
+    "embedding": "qwen-0.6b",
+    "reranker": "qwen-reranker-4b",
+    "top1_delta_vs_standalone": 0.19,
+    "paired_bootstrap95": [
+      0.12,
+      0.27
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "eng-zho",
+    "embedding": "qwen-4b",
+    "reranker": "qwen-reranker-4b",
+    "top1_delta_vs_standalone": 0.17,
+    "paired_bootstrap95": [
+      0.09,
+      0.25
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "zho-zho",
+    "embedding": "qwen-4b",
+    "reranker": "qwen-reranker-4b",
+    "top1_delta_vs_standalone": 0.08,
+    "paired_bootstrap95": [
+      0.02,
+      0.15
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "eng-eng",
+    "embedding": "qwen-4b",
+    "reranker": "qwen-reranker-4b",
+    "top1_delta_vs_standalone": 0.09,
+    "paired_bootstrap95": [
+      0.02,
+      0.16
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "eng-zho",
+    "embedding": "qwen-8b",
+    "reranker": "qwen-reranker-4b",
+    "top1_delta_vs_standalone": 0.11,
+    "paired_bootstrap95": [
+      0.04,
+      0.18
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "zho-zho",
+    "embedding": "qwen-8b",
+    "reranker": "qwen-reranker-4b",
+    "top1_delta_vs_standalone": 0.03,
+    "paired_bootstrap95": [
+      -0.01,
+      0.07
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "eng-eng",
+    "embedding": "qwen-8b",
+    "reranker": "qwen-reranker-4b",
+    "top1_delta_vs_standalone": 0.1,
+    "paired_bootstrap95": [
+      0.03,
+      0.17024999999999865
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "eng-zho",
+    "embedding": "bge-m3",
+    "reranker": "qwen-reranker-4b",
+    "top1_delta_vs_standalone": 0.21,
+    "paired_bootstrap95": [
+      0.12,
+      0.3
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "zho-zho",
+    "embedding": "bge-m3",
+    "reranker": "qwen-reranker-4b",
+    "top1_delta_vs_standalone": 0.15,
+    "paired_bootstrap95": [
+      0.08,
+      0.23
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "eng-eng",
+    "embedding": "bge-m3",
+    "reranker": "qwen-reranker-4b",
+    "top1_delta_vs_standalone": 0.12,
+    "paired_bootstrap95": [
+      0.05,
+      0.2
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "eng-zho",
+    "embedding": "embeddinggemma-2",
+    "reranker": "qwen-reranker-4b",
+    "top1_delta_vs_standalone": 0.2,
+    "paired_bootstrap95": [
+      0.11,
+      0.29
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "zho-zho",
+    "embedding": "embeddinggemma-2",
+    "reranker": "qwen-reranker-4b",
+    "top1_delta_vs_standalone": 0.15,
+    "paired_bootstrap95": [
+      0.08,
+      0.22
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  },
+  {
+    "config": "eng-eng",
+    "embedding": "embeddinggemma-2",
+    "reranker": "qwen-reranker-4b",
+    "top1_delta_vs_standalone": 0.17,
+    "paired_bootstrap95": [
+      0.1,
+      0.25
+    ],
+    "interpretation": "exploratory; no multiple-comparison correction"
+  }
+]

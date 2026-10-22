@@ -1,0 +1,184 @@
+{
+  "dataset": "mteb/MLQARetrieval",
+  "source_url": "https://huggingface.co/datasets/mteb/MLQARetrieval",
+  "source_revision": "cf59ddd8f4aaf39ce1869361e09252698c340945",
+  "requested_revision": "main",
+  "license": "cc-by-sa-3.0",
+  "split": "validation",
+  "official_repo_size_note": "Hugging Face dataset card reports 101 MB total; selected raw validation Parquet files total 1205461 bytes.",
+  "orientation": "config name is corpus-language minus query-language; eng-zho is Chinese query to English corpus",
+  "configs": {
+    "eng-zho": {
+      "corpus_language": "eng",
+      "query_language": "zho",
+      "files": {
+        "corpus": {
+          "repo_file": "eng-zho-corpus/validation-00000-of-00001.parquet",
+          "local_file": "raw/eng-zho-corpus/validation-00000-of-00001.parquet",
+          "bytes": 277261,
+          "sha256": "9148cef1a28fdd97a962c388f186aa2111a52c218267c6e79629cb5edfdccf76",
+          "official_size": 277261,
+          "official_lfs_sha256": "9148cef1a28fdd97a962c388f186aa2111a52c218267c6e79629cb5edfdccf76"
+        },
+        "queries": {
+          "repo_file": "eng-zho-queries/validation-00000-of-00001.parquet",
+          "local_file": "raw/eng-zho-queries/validation-00000-of-00001.parquet",
+          "bytes": 21607,
+          "sha256": "c835acc0b951e76322777e5af0e063bae42bd10769229ca25a31369086d45a0d",
+          "official_size": 21607,
+          "official_lfs_sha256": "c835acc0b951e76322777e5af0e063bae42bd10769229ca25a31369086d45a0d"
+        },
+        "qrels": {
+          "repo_file": "eng-zho-qrels/validation-00000-of-00001.parquet",
+          "local_file": "raw/eng-zho-qrels/validation-00000-of-00001.parquet",
+          "bytes": 6203,
+          "sha256": "9dac3703555d43ef67e58d209467ec491e8ad254b2ef849c0f01ed99ded9a0fc",
+          "official_size": 6203,
+          "official_lfs_sha256": "9dac3703555d43ef67e58d209467ec491e8ad254b2ef849c0f01ed99ded9a0fc"
+        }
+      },
+      "full_validation_counts": {
+        "corpus": 430,
+        "queries": 504,
+        "qrels": 504
+      },
+      "subset_counts": {
+        "corpus": 430,
+        "queries": 30,
+        "qrels": 30
+      },
+      "subset_files": {
+        "corpus": {
+          "path": "subset/eng-zho/corpus.jsonl",
+          "bytes": 449102,
+          "sha256": "a8daec547e418d84c69e702bfcb2cfc3b723341185d14e8384d4eca023bdc4b1"
+        },
+        "queries": {
+          "path": "subset/eng-zho/queries.jsonl",
+          "bytes": 2176,
+          "sha256": "8c9f4c4f7036d232aacb658284776be159fb5e723fa36b4ff6048306c4fffeae"
+        },
+        "qrels": {
+          "path": "subset/eng-zho/qrels.jsonl",
+          "bytes": 1604,
+          "sha256": "12a8d23fc648812e7ecd7b844e0ceebcca136ec85ce81b71f5c2d84b37f26625"
+        }
+      }
+    },
+    "zho-zho": {
+      "corpus_language": "zho",
+      "query_language": "zho",
+      "files": {
+        "corpus": {
+          "repo_file": "zho-zho-corpus/validation-00000-of-00001.parquet",
+          "local_file": "raw/zho-zho-corpus/validation-00000-of-00001.parquet",
+          "bytes": 218074,
+          "sha256": "5ed1dff1dee20801e947d9f1d10ab09061483d3c56a7d0f796fdea7b29fd9d53",
+          "official_size": 218074,
+          "official_lfs_sha256": "5ed1dff1dee20801e947d9f1d10ab09061483d3c56a7d0f796fdea7b29fd9d53"
+        },
+        "queries": {
+          "repo_file": "zho-zho-queries/validation-00000-of-00001.parquet",
+          "local_file": "raw/zho-zho-queries/validation-00000-of-00001.parquet",
+          "bytes": 21624,
+          "sha256": "74e0a356e0a47fa9fa6f4e2a2e4623c7dfa750643f993863234609960f985947",
+          "official_size": 21624,
+          "official_lfs_sha256": "74e0a356e0a47fa9fa6f4e2a2e4623c7dfa750643f993863234609960f985947"
+        },
+        "qrels": {
+          "repo_file": "zho-zho-qrels/validation-00000-of-00001.parquet",
+          "local_file": "raw/zho-zho-qrels/validation-00000-of-00001.parquet",
+          "bytes": 6201,
+          "sha256": "c26863da13098e02a72580c9319342277e115a8a576cffa78c5cf7a33cfe1954",
+          "official_size": 6201,
+          "official_lfs_sha256": "c26863da13098e02a72580c9319342277e115a8a576cffa78c5cf7a33cfe1954"
+        }
+      },
+      "full_validation_counts": {
+        "corpus": 443,
+        "queries": 504,
+        "qrels": 504
+      },
+      "subset_counts": {
+        "corpus": 443,
+        "queries": 30,
+        "qrels": 30
+      },
+      "subset_files": {
+        "corpus": {
+          "path": "subset/zho-zho/corpus.jsonl",
+          "bytes": 314222,
+          "sha256": "d089099938d72b9921d0b71f2684cc677a8905eba63abe85685955aa9f4cfb8e"
+        },
+        "queries": {
+          "path": "subset/zho-zho/queries.jsonl",
+          "bytes": 2240,
+          "sha256": "bd821f5e939b84ed52f1881c2198510a05173959d84e082c84aeefce913aab3e"
+        },
+        "qrels": {
+          "path": "subset/zho-zho/qrels.jsonl",
+          "bytes": 1605,
+          "sha256": "260259148241efe8fc2a5092c8ce8747eececce7e6f7cc0f223a85f2b91912c2"
+        }
+      }
+    },
+    "eng-eng": {
+      "corpus_language": "eng",
+      "query_language": "eng",
+      "files": {
+        "corpus": {
+          "repo_file": "eng-eng-corpus/validation-00000-of-00001.parquet",
+          "local_file": "raw/eng-eng-corpus/validation-00000-of-00001.parquet",
+          "bytes": 592947,
+          "sha256": "2a9ffa08127f13ebe3d948d90a6fd4b2f188aee0d3289cc06665fba73f9cb29f",
+          "official_size": 592947,
+          "official_lfs_sha256": "2a9ffa08127f13ebe3d948d90a6fd4b2f188aee0d3289cc06665fba73f9cb29f"
+        },
+        "queries": {
+          "repo_file": "eng-eng-queries/validation-00000-of-00001.parquet",
+          "local_file": "raw/eng-eng-queries/validation-00000-of-00001.parquet",
+          "bytes": 48120,
+          "sha256": "08da7092232bfe5c625f78082b2af29d78ecde633abde1a810b0b0c363e49559",
+          "official_size": 48120,
+          "official_lfs_sha256": "08da7092232bfe5c625f78082b2af29d78ecde633abde1a810b0b0c363e49559"
+        },
+        "qrels": {
+          "repo_file": "eng-eng-qrels/validation-00000-of-00001.parquet",
+          "local_file": "raw/eng-eng-qrels/validation-00000-of-00001.parquet",
+          "bytes": 13424,
+          "sha256": "ef783780d9e296caa5c3aa3fafb328dd25e823f8e43a397b057f66a18b47b86f",
+          "official_size": 13424,
+          "official_lfs_sha256": "ef783780d9e296caa5c3aa3fafb328dd25e823f8e43a397b057f66a18b47b86f"
+        }
+      },
+      "full_validation_counts": {
+        "corpus": 978,
+        "queries": 1148,
+        "qrels": 1148
+      },
+      "subset_counts": {
+        "corpus": 978,
+        "queries": 30,
+        "qrels": 30
+      },
+      "subset_files": {
+        "corpus": {
+          "path": "subset/eng-eng/corpus.jsonl",
+          "bytes": 962364,
+          "sha256": "95807f0f2f27750fa223ea7458accf7f29c83fad9f24e44a4666272abd83daa0"
+        },
+        "queries": {
+          "path": "subset/eng-eng/queries.jsonl",
+          "bytes": 2326,
+          "sha256": "99b7fb66bd5fbf2bb3cff89616877cc9655f8e8495e72cbc22ca9315d60c3079"
+        },
+        "qrels": {
+          "path": "subset/eng-eng/qrels.jsonl",
+          "bytes": 1634,
+          "sha256": "74958363dc15cacd95f6f6434e36618f706e7849ab818c19bf331ac08f43c256"
+        }
+      }
+    }
+  },
+  "prepared_at": "2026-09-16T08:37:55.010810+00:00"
+}

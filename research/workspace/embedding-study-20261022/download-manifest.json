@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-22",
+  "models": [
+    {
+      "repo": "ggml-org/embeddinggemma-2-GGUF",
+      "revision": "58faf90940886df2d62be555c8765d00dac362c5",
+      "file": "embeddinggemma-2-Q8_0.gguf",
+      "bytes": 309855456,
+      "sha256": "2188ac1deca4b77dffefd603c2776a9d76d9d74ec01841392982ebb840b09135",
+      "url": "https://huggingface.co/ggml-org/embeddinggemma-2-GGUF/resolve/58faf90940886df2d62be555c8765d00dac362c5/embeddinggemma-2-Q8_0.gguf"
+    },
+    {
+      "repo": "Qwen/Qwen3-Embedding-0.6B-GGUF",
+      "revision": "370f27d7550e0def9b39c1f16d3fbaa13aa67728",
+      "file": "Qwen3-Embedding-0.6B-Q8_0.gguf",
+      "bytes": 639150592,
+      "sha256": "06507c7b42688469c4e7298b0a1e16deff06caf291cf0a5b278c308249c3e439",
+      "url": "https://huggingface.co/Qwen/Qwen3-Embedding-0.6B-GGUF/resolve/370f27d7550e0def9b39c1f16d3fbaa13aa67728/Qwen3-Embedding-0.6B-Q8_0.gguf"
+    },
+    {
+      "repo": "ggml-org/bge-m3-Q8_0-GGUF",
+      "revision": "9eba04c5d75ba5a1595e45de734d36bef4e5cb98",
+      "file": "bge-m3-q8_0.gguf",
+      "bytes": 634553760,
+      "sha256": "aa473d51f451a22f0fcf39ba3330c14bed38a385712b1113440f69df4047a173",
+      "url": "https://huggingface.co/ggml-org/bge-m3-Q8_0-GGUF/resolve/9eba04c5d75ba5a1595e45de734d36bef4e5cb98/bge-m3-q8_0.gguf"
+    },
+    {
+      "repo": "Qwen/Qwen3-Embedding-8B-GGUF",
+      "revision": "69d0e58a13e463cd99a9b83e3f5fee7c10265fab",
+      "file": "Qwen3-Embedding-8B-Q8_0.gguf",
+      "bytes": 8047105824,
+      "sha256": "d20ddc71e8a5c4344f2343481e242233a997dc5eaff442427a945836c97b4deb",
+      "url": "https://huggingface.co/Qwen/Qwen3-Embedding-8B-GGUF/resolve/69d0e58a13e463cd99a9b83e3f5fee7c10265fab/Qwen3-Embedding-8B-Q8_0.gguf"
+    },
+    {
+      "repo": "mradermacher/F2LLM-v2-0.6B-GGUF",
+      "revision": "641cb8859b59035469cb7d93fbd96f61cd5be4a7",
+      "file": "F2LLM-v2-0.6B.Q8_0.gguf",
+      "bytes": 639448832,
+      "sha256": "6854d9fa3e411f8a93d0f2e691d947bffdbc4bffb601bfe35e3b34c4de4fdbe7",
+      "url": "https://huggingface.co/mradermacher/F2LLM-v2-0.6B-GGUF/resolve/641cb8859b59035469cb7d93fbd96f61cd5be4a7/F2LLM-v2-0.6B.Q8_0.gguf"
+    },
+    {
+      "repo": "xnohat/granite-embedding-97m-multilingual-r2-GGUF",
+      "revision": "99b777f85dce56624a6ac84ef51385425d61e193",
+      "file": "granite-embedding-97M-multilingual-r2-Q8_0.gguf",
+      "bytes": 115061088,
+      "sha256": "25155b89638e501ac33495fa278d551d7545e1e2f62722a499bba1f064c080f2",
+      "url": "https://huggingface.co/xnohat/granite-embedding-97m-multilingual-r2-GGUF/resolve/99b777f85dce56624a6ac84ef51385425d61e193/granite-embedding-97M-multilingual-r2-Q8_0.gguf"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-09-16",
+  "scope": "llama.cpp local retrieval deployment",
+  "runtime": {
+    "repository": "<WORKSPACE>/llama.cpp-qwen38",
+    "version": "0.4.1",
+    "commit": "b29c606",
+    "binary": "<WORKSPACE>/llama.cpp-qwen38/build/bin/llama-server",
+    "binary_sha256": "c265c714d3e9fe575e5a2e19e76753d26924f204470bca04dffc4c8e5da06023",
+    "backend": "Metal (explicit --gpu-layers 99 for benchmark; production inherits n-gpu-layers=all)",
+    "router_port": 8080,
+    "models_max": 4,
+    "pin_support": "local source patch; pin excludes a preset from automatic LRU eviction"
+  },
+  "models": [
+    {
+      "id": "qwen3-embedding-4b",
+      "file": "Qwen3-Embedding-4B.Q8_0.gguf",
+      "source": "Qwen/Qwen3-Embedding-4B",
+      "source_url": "https://huggingface.co/Qwen/Qwen3-Embedding-4B",
+      "license": "Apache-2.0",
+      "size_bytes": 4279660672,
+      "sha256": "d520a7537a5b1d516363ec58c31296af1b1377eb011aa4a54af508f2e9d92d7e",
+      "package_file": "models/Qwen3-Embedding-4B.Q8_0.gguf",
+      "kind": "embedding",
+      "startup": false,
+      "pin": false
+    },
+    {
+      "id": "qwen3-reranker-0.6b",
+      "file": "qwen-reranker-rebuilt/Qwen3-Reranker-0.6B-Q8_0.gguf",
+      "source": "Qwen/Qwen3-Reranker-0.6B converted from official HF weights",
+      "source_url": "https://huggingface.co/Qwen/Qwen3-Reranker-0.6B",
+      "license": "Apache-2.0",
+      "size_bytes": 639153344,
+      "sha256": "21c265fd5e3695f998983645dab7e59eddecde1e61349a68534e96afdc3f8821",
+      "package_file": "models/Qwen3-Reranker-0.6B-Q8_0.gguf",
+      "kind": "reranker",
+      "startup": false,
+      "pin": false,
+      "compatibility": "rebuilt GGUF includes rerank chat template, classifier labels, and cls.output.weight"
+    },
+    {
+      "id": "bge-reranker-v2-m3",
+      "file": "bge-reranker-v2-m3-q8_0.gguf",
+      "source": "BAAI/bge-reranker-v2-m3",
+      "source_url": "https://huggingface.co/BAAI/bge-reranker-v2-m3",
+      "license": "MIT",
+      "size_bytes": 635676416,
+      "sha256": "a43c7c9b11a4c1517e5bf95151960e1621d1b72f7a493364b01e386cf1aaa1d3",
+      "package_file": "models/bge-reranker-v2-m3-q8_0.gguf",
+      "kind": "reranker",
+      "startup": true,
+      "pin": true
+    }
+  ],
+  "resident_models": [
+    {
+      "id": "gemma-4-e4b",
+      "file": "<WORKSPACE>/gemma-4-E4B-it-qat-UD-Q4_K_XL.gguf",
+      "startup": true,
+      "pin": true
+    },
+    {
+      "id": "qwen3-embedding-8b",
+      "file": "<WORKSPACE>/Qwen3-Embedding-8B-Q8_0.gguf",
+      "startup": true,
+      "pin": true
+    },
+    {
+      "id": "bge-reranker-v2-m3",
+      "file": "<WORKSPACE>/bge-reranker-v2-m3-q8_0.gguf",
+      "startup": true,
+      "pin": true
+    }
+  ],
+  "activation": {
+    "workspace_config": "<WORKSPACE>/models.ini",
+    "workspace_start_script": "<WORKSPACE>/start-llama-server.sh",
+    "launchd_script": "/usr/local/llama/start-llama-server.sh",
+    "launchd_plist": "/Library/LaunchDaemons/com.gregtsai.llama-server.plist",
+    "workspace_ready": true,
+    "launchd_script_installed": false,
+    "blocker": "launchd script is root-owned and sudo password was not available to this task"
+  },
+  "artifacts": {
+    "combined_report": "qwen-reranker-rebuilt/real-dataset/benchmark-metal-combined/report.md",
+    "synthetic_report": "qwen-reranker-rebuilt/benchmark-metal/report.md",
+    "deployment_guide": "qwen-reranker-rebuilt/deployment/DEPLOYMENT_GUIDE.md",
+    "evaluation_plan": "qwen-reranker-rebuilt/deployment/EVALUATION_PLAN.md",
+    "pin_patch": "qwen-reranker-rebuilt/deployment/PIN_FEATURE.patch",
+    "pin_smoke_report": "qwen-reranker-rebuilt/deployment/PIN_SMOKE_REPORT.md",
+    "checksums": "qwen-reranker-rebuilt/deployment/checksums.sha256"
+  },
+  "package_layout": {
+    "models": "models/",
+    "runtime": "runtime/",
+    "config": "config/",
+    "reports": "reports/",
+    "deployment": "deployment/"
+  }
+}

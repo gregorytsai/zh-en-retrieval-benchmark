@@ -1,0 +1,10 @@
+{
+  "mean_seconds": {
+    "bge-reranker": 0.8470154138406117,
+    "qwen-reranker-0.6b": 1.1143145221551258,
+    "qwen-reranker-4b": 6.199811623525619
+  },
+  "n": 100,
+  "projected_main_hours": 8.420618344740735,
+  "candidate_policy": "fixed deterministic sample with inserted positive; timing only, not retrieval quality"
+}

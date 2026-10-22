@@ -1,0 +1,62 @@
+[
+  {
+    "title": "MLQA 官方資料集與授權",
+    "url": "https://github.com/facebookresearch/MLQA",
+    "note": "資料來自 Wikipedia，資料採 CC BY-SA 3.0；程式授權分開。"
+  },
+  {
+    "title": "MLQARetrieval 官方資料卡",
+    "url": "https://huggingface.co/datasets/mteb/MLQARetrieval",
+    "note": "MTEB 檢索版本；現行資料卡標示 cc-by-sa-3.0。本次固定 commit 以封存 manifest 為準。"
+  },
+  {
+    "title": "CC BY-SA 3.0 授權條款摘要",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "note": "允許分享及改作，需署名、保留授權、標記衍生修改與相同方式分享。"
+  },
+  {
+    "title": "MLQA: Evaluating Cross-lingual Extractive Question Answering",
+    "url": "https://aclanthology.org/2020.acl-main.653/",
+    "note": "Lewis 等人，ACL 2020；跨語抽取式問答基準，並非翻譯品質排行榜。"
+  },
+  {
+    "title": "Qwen3 Embedding 官方規格",
+    "url": "https://huggingface.co/Qwen/Qwen3-Embedding-0.6B",
+    "note": "三種模型尺寸、輸出維度、任務提示與 Apache-2.0。"
+  },
+  {
+    "title": "Qwen3-Reranker-0.6B 官方模型卡",
+    "url": "https://huggingface.co/Qwen/Qwen3-Reranker-0.6B",
+    "note": "0.6B 重排器與正確的模板、相關性分數實作。"
+  },
+  {
+    "title": "Qwen3-Reranker-4B 官方模型卡",
+    "url": "https://huggingface.co/Qwen/Qwen3-Reranker-4B",
+    "note": "4B 多語重排器，Apache-2.0。"
+  },
+  {
+    "title": "BGE-M3 官方模型卡",
+    "url": "https://huggingface.co/BAAI/bge-m3",
+    "note": "MIT；dense、sparse、多向量功能與混合檢索建議。"
+  },
+  {
+    "title": "BGE-reranker-v2-m3 官方模型卡",
+    "url": "https://huggingface.co/BAAI/bge-reranker-v2-m3",
+    "note": "Apache-2.0；多語 query-document 配對評分。"
+  },
+  {
+    "title": "EmbeddingGemma 2 官方模型卡",
+    "url": "https://huggingface.co/google/embeddinggemma-2",
+    "note": "Apache-2.0；文字 270M、全多模態 740M、768 維；提示與數值精度要求。"
+  },
+  {
+    "title": "F2LLM-v2-0.6B 官方模型卡",
+    "url": "https://huggingface.co/codefuse-ai/F2LLM-v2-0.6B",
+    "note": "Apache-2.0；多語指令向量、1024 維、MRL 與 query/document 格式。"
+  },
+  {
+    "title": "Granite Embedding 97M Multilingual R2 官方模型卡",
+    "url": "https://huggingface.co/ibm-granite/granite-embedding-97m-multilingual-r2",
+    "note": "Apache-2.0；97M、384 維、CLS pooling 與 ModernBERT 架構。"
+  }
+]
