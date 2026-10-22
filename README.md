@@ -18,10 +18,12 @@
 ```sh
 python scripts/verify_release.py
 python scripts/build_site.py
+python scripts/package_release.py
+python scripts/verify_release.py
 python -m http.server 8765 --bind 127.0.0.1
 ```
 
-前兩個步驟只用 Python 標準函式庫，不連模型、不重跑推論。瀏覽 http://127.0.0.1:8765/ 。GitHub Pages 可直接由 main 分支根目錄發佈，已含 `.nojekyll`。
+建置、封裝與驗證只用 Python 標準函式庫，不連模型、不重跑推論。封裝會統一文字換行並更新公開檔案雜湊。瀏覽 http://127.0.0.1:8765/ 。GitHub Pages 可直接由 main 分支根目錄發佈，已含 `.nojekyll`。
 
 ## 資料與程式
 

@@ -103,7 +103,9 @@ resources+='''<section class="downloads"><a class="download" href="downloads/res
 <section><h2>重現：先驗證檔案，再決定是否重跑模型</h2><pre>git clone '''+REPO+'''.git
 cd zh-en-retrieval-benchmark
 python scripts/verify_release.py
-python scripts/build_site.py</pre><p>驗證程式只讀本地資料，無須 GPU。網站建置只用 Python 標準函式庫。</p><details><summary>需要重新推論時</summary><p>下載程式包或使用 research/workspace。依原建置說明準備 Q8_0 權重、相容 llama.cpp、Python 套件；請核對模型 SHA-256、pooling、prefix、GPU offload。原 runner 依賴 macOS／Unix 的 fcntl 與程序監控，不是 Windows 一鍵執行套件。</p><p>正式入口為 run_guarded.py。設定新的輸出目錄與未來 UTC deadline；不要 resume 已完成的 v3。v2 檔案只保留 pilot 選題／預算依賴，沒有把 v2 結果混入排行。</p><pre>cd research/workspace/embedding-study-20261022
+python scripts/build_site.py
+python scripts/package_release.py
+python scripts/verify_release.py</pre><p>驗證程式只讀本地資料，無須 GPU。網站建置只用 Python 標準函式庫；封裝會統一文字換行並更新檔案雜湊。</p><details><summary>需要重新推論時</summary><p>下載程式包或使用 research/workspace。依原建置說明準備 Q8_0 權重、相容 llama.cpp、Python 套件；請核對模型 SHA-256、pooling、prefix、GPU offload。原 runner 依賴 macOS／Unix 的 fcntl 與程序監控，不是 Windows 一鍵執行套件。</p><p>正式入口為 run_guarded.py。設定新的輸出目錄與未來 UTC deadline；不要 resume 已完成的 v3。v2 檔案只保留 pilot 選題／預算依賴，沒有把 v2 結果混入排行。</p><pre>cd research/workspace/embedding-study-20261022
 python -m pip install -r requirements.txt
 # 先依 BUILD_GUIDE_ZH_TW.md 配置權重、資料與 runtime
 python run_guarded.py --output run-NEW-ID --deadline FUTURE-UTC-ISO8601</pre><p>上面命令含需替換的佔位值。原 audit_v3.py 要完整 attempts／GPU logs 才能執行；公開網站採 scripts/verify_release.py。<a href="research/PUBLICATION_CHANGES.md">公開版整理與路徑變更記錄</a>。</p></details></section>'''
