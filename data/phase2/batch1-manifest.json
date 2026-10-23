@@ -1,0 +1,55 @@
+{
+  "run_kind": "official",
+  "dataset_file_name": "datasets.json",
+  "dataset_sha256": "bc0657a77090f86b081b378e3f369653dc08f6049da78487b7dc0c134e7adad1",
+  "binary_sha256": "5f7bee49eaf08bf77b3cc523d88d385750d6b7da8479775b32bc9be030464ae5",
+  "model_sha256": {
+    "bge-reranker": "a43c7c9b11a4c1517e5bf95151960e1621d1b72f7a493364b01e386cf1aaa1d3",
+    "embeddinggemma-2": "2188ac1deca4b77dffefd603c2776a9d76d9d74ec01841392982ebb840b09135",
+    "qwen-4b": "d520a7537a5b1d516363ec58c31296af1b1377eb011aa4a54af508f2e9d92d7e",
+    "qwen-8b": "d20ddc71e8a5c4344f2343481e242233a997dc5eaff442427a945836c97b4deb",
+    "qwen-reranker-0.6b": "21c265fd5e3695f998983645dab7e59eddecde1e61349a68534e96afdc3f8821",
+    "qwen-reranker-4b": "4178dde89ef52ba4c986269466c2f1150bf4d94ed1b7ec91cb78ed87361794d1"
+  },
+  "code_sha256": {
+    "legacy_run_benchmark.py": "89e0de38f713fd540be6185d01afb4f92c972a80824320489f73377bda59f4e4",
+    "run_guarded.py": "fdecf6925bcd7e71b1d57c1f0c29670e2cbd6cc3b1120e990cffbb220b400fd2",
+    "run_study.py": "99bb300768e185c358fab2672d097d052dfa39dfda07c3803ff05c70883bc210",
+    "traffic_guard.py": "727a077ad0a1de837a0689ddde5b4f9a7baccb491a0b34a9bf676ff292504ef1"
+  },
+  "dataset_ids": [
+    "eng-zho",
+    "zho-zho",
+    "eng-eng",
+    "acord-eng-eng"
+  ],
+  "requested_configs": [
+    "qwen-4b-standalone",
+    "qwen-8b-standalone",
+    "embeddinggemma-2-standalone",
+    "qwen-4b+bge-reranker",
+    "qwen-4b+qwen-reranker-0.6b",
+    "qwen-4b+qwen-reranker-4b"
+  ],
+  "effective_configs": [
+    "qwen-4b-standalone",
+    "qwen-8b-standalone",
+    "embeddinggemma-2-standalone",
+    "qwen-4b+bge-reranker",
+    "qwen-4b+qwen-reranker-0.6b",
+    "qwen-4b+qwen-reranker-4b"
+  ],
+  "selection_sha256": "b1328fc46641fd90e96081d060e63d2fe15c658ea65da45ceb3df99d6b4efb43",
+  "selected_qrels_sha256": "5a047f38e77ead532625d1d494cf43e4fb44dd7cd6043de224573aff8cd579ef",
+  "deadline_record_sha256": "2c9cc20dbaba831fb1eb8c2e6a5a8a7efe6f7b6b16ddba2ad924e75b11fb8554",
+  "original_started_epoch": 1792747549.186638,
+  "deadline_epoch": 1792790749.186638,
+  "wall_hours": 12.0,
+  "created_at": "2026-10-23T09:25:55.981990+00:00",
+  "deadline_utc": "2026-10-23T21:25:49.186638+00:00",
+  "matrix_summary_count": 24,
+  "matrix_full_query_rows": 13278,
+  "traffic_policy": "fail-closed; /metrics polling every second; 30 seconds continuously quiet; whole dataset×model combo retry",
+  "runner_policy": "one global lock; no v2 dependency; full official query lists; 4096-token preflight; log verbosity 4; GPU layers all; ten fixed positive/negative reranker fixture warmups per reranker server, all excluded from measured rows",
+  "production_modified": false
+}

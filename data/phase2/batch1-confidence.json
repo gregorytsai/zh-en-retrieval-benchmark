@@ -1,0 +1,386 @@
+[
+  {
+    "dataset": "acord-eng-eng",
+    "comparison": "A_vs_B",
+    "left": "qwen-4b+standalone",
+    "right": "qwen-8b+standalone",
+    "metric": "top1",
+    "paired_delta_right_minus_left": 0.10526315789473684,
+    "cluster_count": 57,
+    "query_count": 57,
+    "bootstrap95": [
+      0.017543859649122806,
+      0.21052631578947367
+    ],
+    "bootstrap_replicates": 2000,
+    "cluster_unit": "query metadata cluster_id; query_id fallback"
+  },
+  {
+    "dataset": "acord-eng-eng",
+    "comparison": "A_vs_B",
+    "left": "qwen-4b+standalone",
+    "right": "qwen-8b+standalone",
+    "metric": "ndcg10",
+    "paired_delta_right_minus_left": 0.014969514152279885,
+    "cluster_count": 57,
+    "query_count": 57,
+    "bootstrap95": [
+      -0.005250477216831569,
+      0.03715008895042966
+    ],
+    "bootstrap_replicates": 2000,
+    "cluster_unit": "query metadata cluster_id; query_id fallback"
+  },
+  {
+    "dataset": "acord-eng-eng",
+    "comparison": "A_vs_E",
+    "left": "qwen-4b+standalone",
+    "right": "qwen-4b+qwen-reranker-0.6b",
+    "metric": "top1",
+    "paired_delta_right_minus_left": 0.07017543859649122,
+    "cluster_count": 57,
+    "query_count": 57,
+    "bootstrap95": [
+      -0.017543859649122806,
+      0.17543859649122806
+    ],
+    "bootstrap_replicates": 2000,
+    "cluster_unit": "query metadata cluster_id; query_id fallback"
+  },
+  {
+    "dataset": "acord-eng-eng",
+    "comparison": "A_vs_E",
+    "left": "qwen-4b+standalone",
+    "right": "qwen-4b+qwen-reranker-0.6b",
+    "metric": "ndcg10",
+    "paired_delta_right_minus_left": 0.02575785784056776,
+    "cluster_count": 57,
+    "query_count": 57,
+    "bootstrap95": [
+      -0.0004892718846634572,
+      0.05313095370952922
+    ],
+    "bootstrap_replicates": 2000,
+    "cluster_unit": "query metadata cluster_id; query_id fallback"
+  },
+  {
+    "dataset": "acord-eng-eng",
+    "comparison": "E_vs_F",
+    "left": "qwen-4b+qwen-reranker-0.6b",
+    "right": "qwen-4b+qwen-reranker-4b",
+    "metric": "top1",
+    "paired_delta_right_minus_left": -0.017543859649122806,
+    "cluster_count": 57,
+    "query_count": 57,
+    "bootstrap95": [
+      -0.12280701754385964,
+      0.08771929824561403
+    ],
+    "bootstrap_replicates": 2000,
+    "cluster_unit": "query metadata cluster_id; query_id fallback"
+  },
+  {
+    "dataset": "acord-eng-eng",
+    "comparison": "E_vs_F",
+    "left": "qwen-4b+qwen-reranker-0.6b",
+    "right": "qwen-4b+qwen-reranker-4b",
+    "metric": "ndcg10",
+    "paired_delta_right_minus_left": 0.024318572761134784,
+    "cluster_count": 57,
+    "query_count": 57,
+    "bootstrap95": [
+      -0.0009252697564882297,
+      0.05246374545308216
+    ],
+    "bootstrap_replicates": 2000,
+    "cluster_unit": "query metadata cluster_id; query_id fallback"
+  },
+  {
+    "dataset": "eng-eng",
+    "comparison": "A_vs_B",
+    "left": "qwen-4b+standalone",
+    "right": "qwen-8b+standalone",
+    "metric": "top1",
+    "paired_delta_right_minus_left": 0.01132404181184669,
+    "cluster_count": 978,
+    "query_count": 1148,
+    "bootstrap95": [
+      -0.0027112896879073305,
+      0.0256664035934232
+    ],
+    "bootstrap_replicates": 2000,
+    "cluster_unit": "query metadata cluster_id; query_id fallback"
+  },
+  {
+    "dataset": "eng-eng",
+    "comparison": "A_vs_B",
+    "left": "qwen-4b+standalone",
+    "right": "qwen-8b+standalone",
+    "metric": "ndcg10",
+    "paired_delta_right_minus_left": 0.00668869871660848,
+    "cluster_count": 978,
+    "query_count": 1148,
+    "bootstrap95": [
+      -0.0015876349795432088,
+      0.014647974915281371
+    ],
+    "bootstrap_replicates": 2000,
+    "cluster_unit": "query metadata cluster_id; query_id fallback"
+  },
+  {
+    "dataset": "eng-eng",
+    "comparison": "A_vs_E",
+    "left": "qwen-4b+standalone",
+    "right": "qwen-4b+qwen-reranker-0.6b",
+    "metric": "top1",
+    "paired_delta_right_minus_left": 0.09843205574912892,
+    "cluster_count": 978,
+    "query_count": 1148,
+    "bootstrap95": [
+      0.07671854453628227,
+      0.11976296750331357
+    ],
+    "bootstrap_replicates": 2000,
+    "cluster_unit": "query metadata cluster_id; query_id fallback"
+  },
+  {
+    "dataset": "eng-eng",
+    "comparison": "A_vs_E",
+    "left": "qwen-4b+standalone",
+    "right": "qwen-4b+qwen-reranker-0.6b",
+    "metric": "ndcg10",
+    "paired_delta_right_minus_left": 0.05885522581038952,
+    "cluster_count": 978,
+    "query_count": 1148,
+    "bootstrap95": [
+      0.04760218522656002,
+      0.07169683007792253
+    ],
+    "bootstrap_replicates": 2000,
+    "cluster_unit": "query metadata cluster_id; query_id fallback"
+  },
+  {
+    "dataset": "eng-eng",
+    "comparison": "E_vs_F",
+    "left": "qwen-4b+qwen-reranker-0.6b",
+    "right": "qwen-4b+qwen-reranker-4b",
+    "metric": "top1",
+    "paired_delta_right_minus_left": 0.016550522648083623,
+    "cluster_count": 978,
+    "query_count": 1148,
+    "bootstrap95": [
+      0.00259050621895543,
+      0.03125464634664398
+    ],
+    "bootstrap_replicates": 2000,
+    "cluster_unit": "query metadata cluster_id; query_id fallback"
+  },
+  {
+    "dataset": "eng-eng",
+    "comparison": "E_vs_F",
+    "left": "qwen-4b+qwen-reranker-0.6b",
+    "right": "qwen-4b+qwen-reranker-4b",
+    "metric": "ndcg10",
+    "paired_delta_right_minus_left": 0.010815892118561127,
+    "cluster_count": 978,
+    "query_count": 1148,
+    "bootstrap95": [
+      0.004040984047830497,
+      0.018158477635775237
+    ],
+    "bootstrap_replicates": 2000,
+    "cluster_unit": "query metadata cluster_id; query_id fallback"
+  },
+  {
+    "dataset": "eng-zho",
+    "comparison": "A_vs_B",
+    "left": "qwen-4b+standalone",
+    "right": "qwen-8b+standalone",
+    "metric": "top1",
+    "paired_delta_right_minus_left": 0.025793650793650792,
+    "cluster_count": 430,
+    "query_count": 504,
+    "bootstrap95": [
+      0.0019490344077247382,
+      0.050584248334094736
+    ],
+    "bootstrap_replicates": 2000,
+    "cluster_unit": "query metadata cluster_id; query_id fallback"
+  },
+  {
+    "dataset": "eng-zho",
+    "comparison": "A_vs_B",
+    "left": "qwen-4b+standalone",
+    "right": "qwen-8b+standalone",
+    "metric": "ndcg10",
+    "paired_delta_right_minus_left": 0.0124604662559923,
+    "cluster_count": 430,
+    "query_count": 504,
+    "bootstrap95": [
+      0.0015112082187205304,
+      0.024929442561568482
+    ],
+    "bootstrap_replicates": 2000,
+    "cluster_unit": "query metadata cluster_id; query_id fallback"
+  },
+  {
+    "dataset": "eng-zho",
+    "comparison": "A_vs_E",
+    "left": "qwen-4b+standalone",
+    "right": "qwen-4b+qwen-reranker-0.6b",
+    "metric": "top1",
+    "paired_delta_right_minus_left": 0.06944444444444445,
+    "cluster_count": 430,
+    "query_count": 504,
+    "bootstrap95": [
+      0.036361803519061583,
+      0.10351919778963413
+    ],
+    "bootstrap_replicates": 2000,
+    "cluster_unit": "query metadata cluster_id; query_id fallback"
+  },
+  {
+    "dataset": "eng-zho",
+    "comparison": "A_vs_E",
+    "left": "qwen-4b+standalone",
+    "right": "qwen-4b+qwen-reranker-0.6b",
+    "metric": "ndcg10",
+    "paired_delta_right_minus_left": 0.04220057572029143,
+    "cluster_count": 430,
+    "query_count": 504,
+    "bootstrap95": [
+      0.02538975227295828,
+      0.0599550868865767
+    ],
+    "bootstrap_replicates": 2000,
+    "cluster_unit": "query metadata cluster_id; query_id fallback"
+  },
+  {
+    "dataset": "eng-zho",
+    "comparison": "E_vs_F",
+    "left": "qwen-4b+qwen-reranker-0.6b",
+    "right": "qwen-4b+qwen-reranker-4b",
+    "metric": "top1",
+    "paired_delta_right_minus_left": 0.057539682539682536,
+    "cluster_count": 430,
+    "query_count": 504,
+    "bootstrap95": [
+      0.03522504892367906,
+      0.08219459947009412
+    ],
+    "bootstrap_replicates": 2000,
+    "cluster_unit": "query metadata cluster_id; query_id fallback"
+  },
+  {
+    "dataset": "eng-zho",
+    "comparison": "E_vs_F",
+    "left": "qwen-4b+qwen-reranker-0.6b",
+    "right": "qwen-4b+qwen-reranker-4b",
+    "metric": "ndcg10",
+    "paired_delta_right_minus_left": 0.025411726187632645,
+    "cluster_count": 430,
+    "query_count": 504,
+    "bootstrap95": [
+      0.015299715923877768,
+      0.035851277342871274
+    ],
+    "bootstrap_replicates": 2000,
+    "cluster_unit": "query metadata cluster_id; query_id fallback"
+  },
+  {
+    "dataset": "zho-zho",
+    "comparison": "A_vs_B",
+    "left": "qwen-4b+standalone",
+    "right": "qwen-8b+standalone",
+    "metric": "top1",
+    "paired_delta_right_minus_left": 0.011904761904761904,
+    "cluster_count": 443,
+    "query_count": 504,
+    "bootstrap95": [
+      -0.014029467385475176,
+      0.0370388454861111
+    ],
+    "bootstrap_replicates": 2000,
+    "cluster_unit": "query metadata cluster_id; query_id fallback"
+  },
+  {
+    "dataset": "zho-zho",
+    "comparison": "A_vs_B",
+    "left": "qwen-4b+standalone",
+    "right": "qwen-8b+standalone",
+    "metric": "ndcg10",
+    "paired_delta_right_minus_left": 0.01075381928742449,
+    "cluster_count": 443,
+    "query_count": 504,
+    "bootstrap95": [
+      -0.0013625908953475777,
+      0.02304856303586595
+    ],
+    "bootstrap_replicates": 2000,
+    "cluster_unit": "query metadata cluster_id; query_id fallback"
+  },
+  {
+    "dataset": "zho-zho",
+    "comparison": "A_vs_E",
+    "left": "qwen-4b+standalone",
+    "right": "qwen-4b+qwen-reranker-0.6b",
+    "metric": "top1",
+    "paired_delta_right_minus_left": 0.07341269841269842,
+    "cluster_count": 443,
+    "query_count": 504,
+    "bootstrap95": [
+      0.043995617529880474,
+      0.10442064114445947
+    ],
+    "bootstrap_replicates": 2000,
+    "cluster_unit": "query metadata cluster_id; query_id fallback"
+  },
+  {
+    "dataset": "zho-zho",
+    "comparison": "A_vs_E",
+    "left": "qwen-4b+standalone",
+    "right": "qwen-4b+qwen-reranker-0.6b",
+    "metric": "ndcg10",
+    "paired_delta_right_minus_left": 0.04627237686065204,
+    "cluster_count": 443,
+    "query_count": 504,
+    "bootstrap95": [
+      0.029560315131880805,
+      0.0642847822089006
+    ],
+    "bootstrap_replicates": 2000,
+    "cluster_unit": "query metadata cluster_id; query_id fallback"
+  },
+  {
+    "dataset": "zho-zho",
+    "comparison": "E_vs_F",
+    "left": "qwen-4b+qwen-reranker-0.6b",
+    "right": "qwen-4b+qwen-reranker-4b",
+    "metric": "top1",
+    "paired_delta_right_minus_left": 0.031746031746031744,
+    "cluster_count": 443,
+    "query_count": 504,
+    "bootstrap95": [
+      0.011809865678554887,
+      0.052531742781077195
+    ],
+    "bootstrap_replicates": 2000,
+    "cluster_unit": "query metadata cluster_id; query_id fallback"
+  },
+  {
+    "dataset": "zho-zho",
+    "comparison": "E_vs_F",
+    "left": "qwen-4b+qwen-reranker-0.6b",
+    "right": "qwen-4b+qwen-reranker-4b",
+    "metric": "ndcg10",
+    "paired_delta_right_minus_left": 0.015848844766363415,
+    "cluster_count": 443,
+    "query_count": 504,
+    "bootstrap95": [
+      0.005441448500211402,
+      0.026820141868987214
+    ],
+    "bootstrap_replicates": 2000,
+    "cluster_unit": "query metadata cluster_id; query_id fallback"
+  }
+]

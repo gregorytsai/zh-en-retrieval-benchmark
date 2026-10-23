@@ -1,0 +1,44 @@
+{
+  "run_kind": "official",
+  "dataset_file_name": "datasets.json",
+  "dataset_sha256": "fdf802cc03e9059783e5a2cba0785437253f07841ec6956246d5884461e7ba3d",
+  "binary_sha256": "5f7bee49eaf08bf77b3cc523d88d385750d6b7da8479775b32bc9be030464ae5",
+  "model_sha256": {
+    "qwen-4b": "d520a7537a5b1d516363ec58c31296af1b1377eb011aa4a54af508f2e9d92d7e",
+    "qwen-reranker-0.6b": "21c265fd5e3695f998983645dab7e59eddecde1e61349a68534e96afdc3f8821",
+    "qwen-reranker-4b": "4178dde89ef52ba4c986269466c2f1150bf4d94ed1b7ec91cb78ed87361794d1"
+  },
+  "code_sha256": {
+    "legacy_run_benchmark.py": "89e0de38f713fd540be6185d01afb4f92c972a80824320489f73377bda59f4e4",
+    "run_guarded.py": "f3604a06d1a6324bc584e7c38af148f44055be541db271855131eea12ac88a08",
+    "run_study.py": "5c0577a805fbe961835f5dc48bf5a24dd13c3871cdcae61b93df708633d747b6",
+    "traffic_guard.py": "727a077ad0a1de837a0689ddde5b4f9a7baccb491a0b34a9bf676ff292504ef1"
+  },
+  "dataset_ids": [
+    "miracl-zh-zh",
+    "miracl-en-en"
+  ],
+  "requested_configs": [
+    "qwen-4b-standalone",
+    "qwen-4b+qwen-reranker-0.6b",
+    "qwen-4b+qwen-reranker-4b"
+  ],
+  "effective_configs": [
+    "qwen-4b-standalone",
+    "qwen-4b+qwen-reranker-0.6b",
+    "qwen-4b+qwen-reranker-4b"
+  ],
+  "selection_sha256": "0e2e322f0e1107085c79e666195eb01a82d0ed9509516acd64d9e0a1d07da4df",
+  "selected_qrels_sha256": "cbe98bde048685ae5c8a7c58a9e21a9119d888cf279bd5ac1f7015e20ee80d48",
+  "deadline_record_sha256": "7a2892aa31fa874c24c64c60d33a1cff982171dce96bb8bfc9c50fea1786ef6e",
+  "original_started_epoch": 1792774016.846807,
+  "deadline_epoch": 1792817216.846807,
+  "wall_hours": 12.0,
+  "created_at": "2026-10-23T16:47:00.289830+00:00",
+  "deadline_utc": "2026-10-24T04:46:56.846807+00:00",
+  "matrix_summary_count": 6,
+  "matrix_full_query_rows": 1200,
+  "traffic_policy": "fail-closed; /metrics polling every second; 30 seconds continuously quiet; whole dataset×model combo retry",
+  "runner_policy": "one global lock; no v2 dependency; full official query lists; 4096-token preflight; log verbosity 4; GPU layers all; ten fixed positive/negative reranker fixture warmups per reranker server, all excluded from measured rows",
+  "production_modified": false
+}

@@ -1,0 +1,130 @@
+[
+  {
+    "dataset": "miracl-en-en",
+    "comparison": "A_vs_E",
+    "left": "qwen-4b+standalone",
+    "right": "qwen-4b+qwen-reranker-0.6b",
+    "metric": "top1",
+    "paired_delta_right_minus_left": 0.06,
+    "cluster_count": 200,
+    "query_count": 200,
+    "bootstrap95": [
+      0.01,
+      0.115
+    ],
+    "bootstrap_replicates": 2000,
+    "cluster_unit": "query metadata cluster_id; query_id fallback"
+  },
+  {
+    "dataset": "miracl-en-en",
+    "comparison": "A_vs_E",
+    "left": "qwen-4b+standalone",
+    "right": "qwen-4b+qwen-reranker-0.6b",
+    "metric": "ndcg10",
+    "paired_delta_right_minus_left": 0.035823331183941834,
+    "cluster_count": 200,
+    "query_count": 200,
+    "bootstrap95": [
+      0.016120130772753018,
+      0.05586153868519229
+    ],
+    "bootstrap_replicates": 2000,
+    "cluster_unit": "query metadata cluster_id; query_id fallback"
+  },
+  {
+    "dataset": "miracl-en-en",
+    "comparison": "E_vs_F",
+    "left": "qwen-4b+qwen-reranker-0.6b",
+    "right": "qwen-4b+qwen-reranker-4b",
+    "metric": "top1",
+    "paired_delta_right_minus_left": 0.02,
+    "cluster_count": 200,
+    "query_count": 200,
+    "bootstrap95": [
+      -0.025,
+      0.065
+    ],
+    "bootstrap_replicates": 2000,
+    "cluster_unit": "query metadata cluster_id; query_id fallback"
+  },
+  {
+    "dataset": "miracl-en-en",
+    "comparison": "E_vs_F",
+    "left": "qwen-4b+qwen-reranker-0.6b",
+    "right": "qwen-4b+qwen-reranker-4b",
+    "metric": "ndcg10",
+    "paired_delta_right_minus_left": 0.02105430951397068,
+    "cluster_count": 200,
+    "query_count": 200,
+    "bootstrap95": [
+      0.00604391404777575,
+      0.03637195430290961
+    ],
+    "bootstrap_replicates": 2000,
+    "cluster_unit": "query metadata cluster_id; query_id fallback"
+  },
+  {
+    "dataset": "miracl-zh-zh",
+    "comparison": "A_vs_E",
+    "left": "qwen-4b+standalone",
+    "right": "qwen-4b+qwen-reranker-0.6b",
+    "metric": "top1",
+    "paired_delta_right_minus_left": -0.01,
+    "cluster_count": 200,
+    "query_count": 200,
+    "bootstrap95": [
+      -0.08,
+      0.06
+    ],
+    "bootstrap_replicates": 2000,
+    "cluster_unit": "query metadata cluster_id; query_id fallback"
+  },
+  {
+    "dataset": "miracl-zh-zh",
+    "comparison": "A_vs_E",
+    "left": "qwen-4b+standalone",
+    "right": "qwen-4b+qwen-reranker-0.6b",
+    "metric": "ndcg10",
+    "paired_delta_right_minus_left": 0.006616535315987564,
+    "cluster_count": 200,
+    "query_count": 200,
+    "bootstrap95": [
+      -0.02270119080908281,
+      0.034522104483048176
+    ],
+    "bootstrap_replicates": 2000,
+    "cluster_unit": "query metadata cluster_id; query_id fallback"
+  },
+  {
+    "dataset": "miracl-zh-zh",
+    "comparison": "E_vs_F",
+    "left": "qwen-4b+qwen-reranker-0.6b",
+    "right": "qwen-4b+qwen-reranker-4b",
+    "metric": "top1",
+    "paired_delta_right_minus_left": 0.05,
+    "cluster_count": 200,
+    "query_count": 200,
+    "bootstrap95": [
+      -0.005,
+      0.11
+    ],
+    "bootstrap_replicates": 2000,
+    "cluster_unit": "query metadata cluster_id; query_id fallback"
+  },
+  {
+    "dataset": "miracl-zh-zh",
+    "comparison": "E_vs_F",
+    "left": "qwen-4b+qwen-reranker-0.6b",
+    "right": "qwen-4b+qwen-reranker-4b",
+    "metric": "ndcg10",
+    "paired_delta_right_minus_left": 0.030422674387868574,
+    "cluster_count": 200,
+    "query_count": 200,
+    "bootstrap95": [
+      0.00873925507607486,
+      0.05228027946957708
+    ],
+    "bootstrap_replicates": 2000,
+    "cluster_unit": "query metadata cluster_id; query_id fallback"
+  }
+]

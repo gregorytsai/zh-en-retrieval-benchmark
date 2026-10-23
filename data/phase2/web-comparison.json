@@ -1,0 +1,161 @@
+{
+  "checked_date": "2026-10-24",
+  "scope": "Primary-source contextual comparison, not a systematic review or novelty proof. External and local numerical scores must not be placed on a shared leaderboard.",
+  "sources": [
+    {
+      "id": "qwen_blog",
+      "title": "Qwen3 Embedding official release, 5 June 2025",
+      "url": "https://qwenlm.github.io/blog/qwen3-embedding/",
+      "evidence": "Reranker evaluation table and its top-100 / Qwen3-Embedding-0.6B protocol note."
+    },
+    {
+      "id": "qwen_paper",
+      "title": "Qwen3 Embedding technical report, v1",
+      "url": "https://arxiv.org/html/2506.05176v1",
+      "evidence": "Tables 2, 4 and 6; table 6 lists MIRACL among supervised training datasets. Does not establish dev leakage."
+    },
+    {
+      "id": "qwen_reranker_card",
+      "title": "Qwen3-Reranker-0.6B official model card",
+      "url": "https://huggingface.co/Qwen/Qwen3-Reranker-0.6B",
+      "evidence": "Evaluation table repeats 0.6B / 4B / 8B scores and fixes the first-stage top-100 retriever."
+    },
+    {
+      "id": "qwen_embedding_card",
+      "title": "Qwen3-Embedding-4B official model card",
+      "url": "https://huggingface.co/Qwen/Qwen3-Embedding-4B",
+      "evidence": "Model overview: 4B parameters, up to 2560 embedding dimensions, 32k context. Evaluation results are task-specific."
+    },
+    {
+      "id": "miracl",
+      "title": "MIRACL official project repository",
+      "url": "https://github.com/project-miracl/miracl",
+      "evidence": "Corpora table: English 32,893,221 passages, Chinese 4,934,368. Dev topics: English 799, Chinese 393."
+    },
+    {
+      "id": "acord_paper",
+      "title": "ACORD ACL 2025 paper",
+      "url": "https://aclanthology.org/2025.acl-long.1206.pdf",
+      "evidence": "Section 3 rating semantics; Section 4 top-100 BM25 experiment; Appendix F.1 linear-gain nDCG and normalized star precision."
+    },
+    {
+      "id": "acord_repo",
+      "title": "ACORD official repository",
+      "url": "https://github.com/The-Atticus-Project/acord",
+      "evidence": "114 queries; test split 50%; grade 0–4 corresponds to stars 1–5; 3–5 stars relevant, 2 stars helpful but not relevant."
+    }
+  ],
+  "conclusions": [
+    {
+      "id": "known_scaling",
+      "placement": "homepage or methods",
+      "classification": "known result, locally supported under a different protocol",
+      "title_zh": "大重排器通常較準，這是已有研究的趨勢",
+      "title_en": "Larger rerankers often improve quality: an established trend",
+      "zh": "Qwen 官方早已報告：4B 重排器在英文、中文及多語檢索平均分數均高於 0.6B。本測試補充的是固定 Qwen 4B 檢索器、Top50 候選與本機 Q8 設定下的品質與耗時，不宣稱首次發現模型放大的效益。",
+      "en": "Qwen already reports higher English, Chinese and multilingual retrieval averages for its 4B reranker than for 0.6B. Our contribution is a local quality-and-latency check with Qwen 4B retrieval, a fixed top-50 pool and Q8 weights, not a first discovery of scaling benefits.",
+      "sources": [
+        "qwen_blog",
+        "qwen_reranker_card"
+      ],
+      "external_numbers": {
+        "metric_label": "Official retrieval benchmark scores, not Top1 accuracy",
+        "protocol": "Qwen3-Embedding-0.6B first stage; rerank top 100",
+        "rows": [
+          {
+            "model": "Qwen3-Reranker-0.6B",
+            "MTEB-R": 65.8,
+            "CMTEB-R": 71.31,
+            "MMTEB-R": 66.36
+          },
+          {
+            "model": "Qwen3-Reranker-4B",
+            "MTEB-R": 69.76,
+            "CMTEB-R": 75.94,
+            "MMTEB-R": 72.74
+          }
+        ]
+      },
+      "comparability": "Compare the qualitative trend only. Different retriever, candidates, datasets, quantization and metrics prohibit direct score subtraction against this site."
+    },
+    {
+      "id": "local_marginal_value",
+      "placement": "homepage",
+      "classification": "local supplementary finding; not claimed novel in the literature",
+      "title_zh": "升級 4B 的價值，取決於檢索方向與你在意的指標",
+      "title_en": "The value of 4B depends on the task and metric",
+      "zh": "在本次 MLQA，0.6B→4B 重排使中文查英文 Top1 增加 5.75 個百分點，英文查英文只增加 1.66 點；ACORD Top1 則下降 1.75 點，但 nDCG 上升。六分項的耗時中位數約增為 5.2–5.8 倍。這是本設定的選型線索，不是所有題目都受益的保證。",
+      "en": "In this MLQA run, upgrading the reranker from 0.6B to 4B adds 5.75 Top1 percentage points for Chinese queries over English documents, versus 1.66 for English over English. ACORD Top1 falls 1.75 points while nDCG rises. Median total latency is about 5.2–5.8 times higher across the six tasks. These are configuration-specific trade-offs, not universal gains.",
+      "sources": [
+        "qwen_paper"
+      ],
+      "local_evidence": "independent-audit.json paired deltas, confidence intervals and timing summaries",
+      "uncertainty_zh": "ACORD 的兩個差異區間皆跨零；MIRACL 中英文 Top1 差異區間也跨零。分項區間不能套用到六資料集等權平均。",
+      "uncertainty_en": "Both ACORD intervals include zero; MIRACL Top1 intervals also include zero in both languages. Task-level intervals do not describe the six-dataset macro average.",
+      "latency_ratios": [
+        {
+          "dataset": "acord-eng-eng",
+          "ratio_of_total_latency_medians": 5.7756865223509415
+        },
+        {
+          "dataset": "eng-eng",
+          "ratio_of_total_latency_medians": 5.595153416192031
+        },
+        {
+          "dataset": "eng-zho",
+          "ratio_of_total_latency_medians": 5.236663597019031
+        },
+        {
+          "dataset": "zho-zho",
+          "ratio_of_total_latency_medians": 5.355269538197584
+        },
+        {
+          "dataset": "miracl-en-en",
+          "ratio_of_total_latency_medians": 5.3793315111917765
+        },
+        {
+          "dataset": "miracl-zh-zh",
+          "ratio_of_total_latency_medians": 5.3811145243992495
+        }
+      ]
+    },
+    {
+      "id": "miracl_scope",
+      "placement": "homepage footnote and methods",
+      "classification": "known benchmark scope plus local limitation",
+      "title_zh": "MIRACL 是標註段落子集測試，不能當作完整排行榜",
+      "title_en": "This MIRACL test uses a judged-passage subset, not the full benchmark",
+      "zh": "官方 MIRACL 英文與中文語料分別約 3,289 萬與 493 萬段；本測試只在 dev 已標註段落的聯集中搜尋，分別為 7,921 與 3,786 段、各 200 題。分數適合比較這個候選環境內的配置，不能與完整語料榜單比高低。Qwen 訓練資料列有 MIRACL，因此也不能稱為未見過資料集的泛化測試。",
+      "en": "Official MIRACL contains 32,893,221 English and 4,934,368 Chinese passages. Here retrieval searches only the union of dev judged passages: 7,921 English and 3,786 Chinese, with 200 queries each. Compare configurations within this subset, not against full-corpus leaderboard scores. Qwen lists MIRACL in supervised training, so this is not evidence of generalization to an unseen dataset.",
+      "sources": [
+        "miracl",
+        "qwen_paper"
+      ],
+      "caution": "Training-set inclusion does not demonstrate dev/test leakage; do not imply contamination without evidence."
+    },
+    {
+      "id": "acord_metric_definition",
+      "placement": "methods and metric tooltip",
+      "classification": "verified protocol difference; necessary interpretation note",
+      "title_zh": "ACORD 要看分級品質，且本頁指標與原論文定義不同",
+      "title_en": "ACORD needs graded evaluation, with explicit metric differences",
+      "zh": "本頁 ACORD Top1 採 grade>0（2星以上），包括「同類但僅供參考」條款；原論文將3–5星視為相關。本頁 nDCG 使用 2^grade−1，原論文使用線性 grade；本頁 P@5 固定除以5，原論文高星 P@5 另按可用條款數正規化。因此只比較本頁同一規則下的模型，不把數字當成官方 ACORD 分數的復現。",
+      "en": "Our ACORD Top1 counts grade>0, or at least 2 stars, including same-category clauses that are only helpful; the paper calls 3–5 stars relevant. We use exponential nDCG gains (2^grade−1) and a fixed P@5 denominator of five. The paper uses linear gains and normalizes star precision by the available qualifying clauses. Our values therefore support within-protocol comparisons, not a reproduction of official ACORD scores.",
+      "sources": [
+        "acord_paper",
+        "acord_repo"
+      ],
+      "local_support": {
+        "ACORD_queries": 57,
+        "ACORD_corpus_documents": 3931,
+        "qwen4b_candidate_recall50": 0.2239454501196524,
+        "qwen4b_candidate_judged_coverage50": 0.15894736842105264
+      },
+      "local_interpretation": "The low candidate recall and judged coverage motivate inspecting retrieval and judgment coverage before attributing all low scores to the reranker."
+    }
+  ],
+  "novelty_statement": {
+    "zh": "本測試提供可重現的本機 Q8 選型補充與任務差異，未證明任何全球首創結論。",
+    "en": "This study adds reproducible local Q8 selection evidence and task-specific trade-offs; it does not establish a globally novel result."
+  }
+}

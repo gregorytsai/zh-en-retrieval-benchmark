@@ -1,42 +1,29 @@
-# 中英檢索實驗室
+# Bilingual Retrieval Lab / 中英檢索實驗室
 
-7 款 embedder、3 款 reranker 的本機中英檢索實測。只有最新完成的 **2026-10-22 guarded v3** 納入排行：22 種組合、3 方向、66 組、6,600 筆測量，重複使用 300 個方向／問題任務。
+**Updated 24 October 2026.** [繁體中文](https://gregorytsai.github.io/zh-en-retrieval-benchmark/) · [English](https://gregorytsai.github.io/zh-en-retrieval-benchmark/en/)
 
-[繁體中文網站](https://gregorytsai.github.io/zh-en-retrieval-benchmark/) · [English website](https://gregorytsai.github.io/zh-en-retrieval-benchmark/en/) · [完整方法](https://gregorytsai.github.io/zh-en-retrieval-benchmark/methods.html) · [下載與授權](https://gregorytsai.github.io/zh-en-retrieval-benchmark/resources.html)
+Latest accepted runs: 14,478 measurements, 30 dataset/setup groups, 2,613 dataset-qualified queries. MLQA full validation in three directions, ACORD test, and two MIRACL judged-passage subsets. This evaluates retrieval ranking, not translation or generated-answer quality.
 
-The complete website is available in Traditional Chinese and English, including all 10 model pages, interactive reranking comparisons, sortable results, methodology and licensing. Original research documents and test materials retain their original language. Contact: [gregorytsai@gmail.com](mailto:gregorytsai@gmail.com).
+| Six-condition equal-weight average | Top-1 | nDCG@10 |
+|---|---:|---:|
+| Qwen3 Embedding 4B alone | 65.35% | 0.73535 |
+| + Qwen3 Reranker 0.6B | 71.37% | 0.77127 |
+| + Qwen3 Reranker 4B | 74.01% | 0.79258 |
 
-這是相關文章檢索與排序，沒有生成翻譯；不代表最終 RAG 回答正確率。中文查英文、中文查中文、英文查英文；未測英文查中文。
+Only three setups were tested in all six conditions. Each condition has weight 1/6 (MLQA family 50%, MIRACL 33.33%, ACORD 16.67%). The interactive site also offers MLQA three-direction averages and each individual condition, metric switching, reranker filtering, sortable tables and model pages. No missing setup is imputed. Historical 22-setup results remain under [baseline.html](https://gregorytsai.github.io/zh-en-retrieval-benchmark/baseline.html).
 
-## 重點
+Important limits: ACORD Top-1 uses grade≥1 (2+ stars), nDCG uses exponential gain, and P@5 uses a fixed denominator; these differ from the original ACORD paper. MIRACL uses a small union of dev judged passages, not the official full corpus. Qwen's published measurements support a larger-reranker quality trend, but scores from different protocols are not directly comparable. Our local observations concern task-specific quality/latency tradeoffs, not first-ever findings.
 
-- 五款主要 embedder 配 Qwen 4B reranker 都為 281/300（93.67%），但逐題和完整排序不相同。
-- Qwen 4B reranker 相較 0.6B，中查英平均增益 10.2 百分點，英查英 0.4 點；重排平均約從 1.16 秒增至 6.29 秒。
-- 單用 Qwen 8B 品質最高（85.67%）；BGE-M3 77.67%／8.14 ms，F2LLM 78%／12.89 ms，只差一題。
-- 硬體：M3 Ultra 256 GiB，Metal，Q8_0。容量是模型檔案大小，未測其他硬體的 RAM 下限或延遲。
+## Inspect and reproduce
 
-## 本機檢查與建置
+- [Methods and source comparison](https://gregorytsai.github.io/zh-en-retrieval-benchmark/en/latest-methods.html)
+- [Latest CSV](data/phase2/summary.csv), [analysis](data/phase2/analysis.json), [independent audit](data/phase2/independent-audit.json)
+- [Batch 1 complete results](downloads/phase2-batch1-results.zip), [Batch 2 complete results](downloads/phase2-batch2-results.zip)
+- [Runner source](research/phase2/README.md), [code ZIP](downloads/phase2-code.zip), [materials](downloads/phase2-materials.zip)
+- [Official-source research](data/phase2/web-comparison.json), [release hashes](data/SHA256SUMS.json)
 
-```sh
-python scripts/verify_release.py
-python scripts/build_site.py
-python scripts/package_release.py
-python scripts/verify_release.py
-python -m http.server 8765 --bind 127.0.0.1
-```
+With Python and NumPy, run `python scripts/verify_phase2.py` for the new measurements and `python scripts/verify_release.py` for the original measurements plus release hashes and links. These are offline arithmetic/integrity checks, not model inference. Build both languages with `python scripts/build_site.py`, then refresh archives/hashes with `python scripts/package_release.py`.
 
-建置、封裝與驗證只用 Python 標準函式庫，不連模型、不重跑推論。封裝會統一文字換行並更新公開檔案雜湊。瀏覽 http://127.0.0.1:8765/ 。GitHub Pages 可直接由 main 分支根目錄發佈，已含 `.nojekyll`。
+MLQA materials retain CC BY-SA 3.0; ACORD retains CC BY 4.0; MIRACL topics/qrels retain Apache 2.0. MIRACL passage text is retrieved from pinned upstream sources using the supplied helper, preserving Wikipedia attribution/terms, rather than rehosted here. Code: MIT. Model weights are not included. See the materials NOTICE and reproduction guide for revisions, hashes and transformations.
 
-## 資料與程式
-
-- `downloads/results-v3.zip`：完整6600逐題結果（含rerank final_ids/scores）、2100 standalone top100排序、摘要、選題、paired CI。
-- `downloads/mlqa-materials.zip`：原始9份Parquet、選用JSON（300題與完整文章庫）、qrels、來源manifest與NOTICE。
-- `downloads/benchmark-code.zip` 與 `research/workspace/`：正式與歷史研究程式、保留相依目錄結構。只使用v3結果，歷史程式不是新排行依據。
-- `data/all-22-combinations.csv`、`data/all-66-groups.csv`、`data/analysis.json`：所有彙總。
-- `research/PUBLICATION_CHANGES.md`：公開版路徑整理、驗證界線。
-
-重新推論需要權重、相容llama.cpp與macOS/Unix程序監控環境；原runner並非Windows一鍵工具。請先閱讀研究建置說明，選新的output與未來deadline，勿resume已完成v3。原始audit_v3.py依賴完整研究封存的attempts/logs；公開成品使用scripts/verify_release.py。
-
-## 授權
-
-自有程式MIT。MLQA素材、節錄與衍生導讀CC BY-SA 3.0，作者／來源／修改聲明見 `data/NOTICE.md`。模型及runtime各自授權，權重不隨本專案散佈。原始資料hash與固定revision保留於manifest。
+聯絡 / Contact: [gregorytsai@gmail.com](mailto:gregorytsai@gmail.com)
