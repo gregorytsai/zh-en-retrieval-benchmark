@@ -1,0 +1,13 @@
+nav{flex-wrap:wrap}
+.language-switch{border:1px solid #93aaa0;border-radius:5px;padding:5px 10px;text-decoration:none;white-space:nowrap}
+html[lang=en] .brand{font-size:16px;max-width:290px;line-height:1.4}
+html[lang=en] .brand-sub{font-size:9px}
+html[lang=en] .hero h1{font-size:clamp(36px,4.1vw,66px);line-height:1.14;letter-spacing:-1.5px}
+html[lang=en] .section-head h2{font-size:clamp(28px,3vw,42px);line-height:1.25}
+html[lang=en] .recommend .eyebrow{line-height:1.6}
+html[lang=en] .recommend h3{min-height:90px}
+html[lang=en] .direction-gain{gap:20px}
+html[lang=en] .metric-row{grid-template-columns:170px minmax(0,1fr) 200px}
+@media(max-width:1100px){html[lang=en] header{flex-wrap:wrap;gap:20px}html[lang=en] .brand-sub{display:none}}
+@media(max-width:800px){html[lang=en] .recommend h3{min-height:0}html[lang=en] .metric-row{grid-template-columns:135px minmax(0,1fr) 165px}}
+@media(max-width:600px){html[lang=en] .metric-row{grid-template-columns:minmax(0,1fr) auto}html[lang=en] nav{gap:12px}html[lang=en] .brand{font-size:15px;max-width:none}html[lang=en] .hero h1{font-size:40px}html[lang=en] .direction-gain b{font-size:27px}}

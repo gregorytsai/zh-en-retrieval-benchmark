@@ -2,7 +2,9 @@
 
 7 款 embedder、3 款 reranker 的本機中英檢索實測。只有最新完成的 **2026-10-22 guarded v3** 納入排行：22 種組合、3 方向、66 組、6,600 筆測量，重複使用 300 個方向／問題任務。
 
-[瀏覽網站](https://gregorytsai.github.io/zh-en-retrieval-benchmark/) · [完整方法](https://gregorytsai.github.io/zh-en-retrieval-benchmark/methods.html) · [下載與授權](https://gregorytsai.github.io/zh-en-retrieval-benchmark/resources.html)
+[繁體中文網站](https://gregorytsai.github.io/zh-en-retrieval-benchmark/) · [English website](https://gregorytsai.github.io/zh-en-retrieval-benchmark/en/) · [完整方法](https://gregorytsai.github.io/zh-en-retrieval-benchmark/methods.html) · [下載與授權](https://gregorytsai.github.io/zh-en-retrieval-benchmark/resources.html)
+
+The complete website is available in Traditional Chinese and English, including all 10 model pages, interactive reranking comparisons, sortable results, methodology and licensing. Original research documents and test materials retain their original language. Contact: [gregorytsai@gmail.com](mailto:gregorytsai@gmail.com).
 
 這是相關文章檢索與排序，沒有生成翻譯；不代表最終 RAG 回答正確率。中文查英文、中文查中文、英文查英文；未測英文查中文。
 

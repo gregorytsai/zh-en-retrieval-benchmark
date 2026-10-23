@@ -128,3 +128,5 @@ urls=['index.html','models.html','methods.html','resources.html']+['models/'+k+'
 (ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>'+SITE+u+'</loc></url>' for u in urls)+'</urlset>',encoding='utf-8')
 (ROOT/'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: '+SITE+'sitemap.xml\n',encoding='utf-8')
 print('Built',len(urls),'pages')
+from build_english import build as build_english
+build_english(urls)
