@@ -1,34 +1,44 @@
-# Bilingual Retrieval Lab / 中英檢索實驗室
+# 地端RAG中英檢索模型實測 / Local RAG Retrieval Benchmark
 
-**Updated 27 October 2026; measurements completed 26 October.** [繁體中文](https://gregorytsai.github.io/zh-en-retrieval-benchmark/) · [English](https://gregorytsai.github.io/zh-en-retrieval-benchmark/en/)
+[繁體中文](https://gregorytsai.github.io/zh-en-retrieval-benchmark/) · [English](https://gregorytsai.github.io/zh-en-retrieval-benchmark/en/)
 
-Complete matrix: **7 embedders × 4 retrieval/reranking settings × 6 conditions = 28 complete setups, 168 summaries, 73,164 accepted query measurements**. The same 2,613 dataset-qualified queries are repeated across setups, not independent subjects. All setups use identical input corpora and query selections; each embedder supplies the same ordered Top50 candidates to its three rerankers.
+**27 October 2026 correction.** Compare 28 Embedder × Reranker setups on the same five conditions: three MLQA directions and two MIRACL language subsets, each weighted 1/5. ACORD is reported separately with seven corrected standalone results. Corrected ACORD reranker results await measurement.
 
-| Six-condition equal-weight average | Top-1 | nDCG@10 | Q8_0 weights |
+| Five-task equal-weight mean | nDCG@10 | Top-1 | Q8_0 weights |
 |---|---:|---:|---:|
-| Qwen 4B + Qwen 4B reranker | 74.01% | 0.7926 | 7.972 GiB |
-| Qwen 8B + Qwen 4B reranker | 74.10% | 0.7917 | 11.480 GiB |
-| BGE-M3 + Qwen 4B reranker | 74.05% | 0.7907 | 4.577 GiB |
-| Qwen 0.6B + Qwen 4B reranker | 74.09% | 0.7893 | 4.581 GiB |
-| BGE-M3 + Qwen 0.6B reranker | 71.69% | 0.7700 | 1.186 GiB |
+| Qwen 8B + Qwen 4B reranker | 0.9190 | 85.42% | 11.480 GiB |
+| Qwen 4B + Qwen 4B reranker | 0.9180 | 85.30% | 7.972 GiB |
+| BGE-M3 + Qwen 0.6B reranker | 0.8956 | 81.82% | 1.186 GiB |
+| Qwen 0.6B + Qwen 0.6B reranker | 0.8940 | 81.57% | 1.191 GiB |
+| Qwen 8B alone | 0.8667 | 77.24% | 7.494 GiB |
 
-Each condition weighs 1/6: MLQA contributes 50%, MIRACL 33.33%, ACORD 16.67%. Top-1 and nDCG leaders differ. Small score differences are descriptive point estimates, not significant wins: no global 28-setup bootstrap intervals or multiplicity corrections were computed. This measures retrieval ranking, not translation or generated-answer quality.
+A small embedder with a small reranker exceeds a large embedder alone on this dataset, with a latency tradeoff: Qwen 0.6B + 0.6B averages about 1.08 s per query, versus about 52 ms for Qwen 8B alone. File size is not measured RAM/VRAM. This is local Q8_0 / Metal performance on M3 Ultra, 256 GiB.
 
-The complete matrix makes small-embedder/large-reranker tradeoffs visible. Larger rerankers give higher six-task mean nDCG for all seven embedders, consistent in direction with [Qwen's published evaluation](https://qwenlm.github.io/blog/qwen3-embedding/), but Qwen's Top100 protocol differs. Local results are not first-ever findings. Pooled median reranking stage time is 0.849 s for BGE, 1.127 s for Qwen 0.6B, and 6.217 s for Qwen 4B on the measured M3 Ultra. File size is not a minimum RAM/VRAM requirement.
+Chinese-to-English retrieval is a focus: Qwen 0.6B + 0.6B reaches 86.31% Top-1, versus 81.94% for Qwen 8B alone; Qwen 8B + 4B reaches 92.26%. The source key `eng-zho` means English context / Chinese question. English-to-Chinese was not tested. Retrieval scores are not translation or generated-answer accuracy.
 
-MIRACL uses a small dev-judged passage union, not the full corpus; near-saturated candidate recall limits embedder discrimination. ACORD has 57 queries; Top-1 uses 2+ stars, nDCG exponential gain and P@5 a fixed denominator, unlike the original paper. Known source-report erratum: standalone Top100 is stale prose; all actual matrix rankings contain Top50.
+## ACORD correction
+
+The previous code assigned unjudged pairs zero gain and retained their rank positions. ACORD explicitly requires ignoring unjudged pairs (paper C.5). It also uses linear nDCG gain; our old code used exponential gain. Earlier arithmetic checks missed this protocol mismatch.
+
+Seven original vector caches passed their stored hashes. Reconstructed full rankings reproduce all 399 original Top50 lists exactly. Corrected evaluation ignores unjudged pairs before cutoffs, uses linear nDCG and requires original stars >=3 for binary metrics. Corrected nDCG@10 ranges from 0.5169 to 0.7027. Star P@5 uses the paper's normalized denominator and excludes queries without qualifying clauses for that metric. Corrected latency is not remeasured and is blank.
+
+Rerankers scored only the old Top50 pool. Filtering that pool is a truncated diagnostic, not a complete corrected run. New candidate scoring is required. Old six-task means and ACORD scores remain historical evidence, not current recommendations.
+
+[ACORD results and research context](https://gregorytsai.github.io/zh-en-retrieval-benchmark/en/acord.html) explains why high-quality legal clauses remain challenging without claiming all published legal scores are poor.
 
 ## Inspect and reproduce
 
-- [Methods, limitations and all downloads](https://gregorytsai.github.io/zh-en-retrieval-benchmark/en/latest-methods.html)
-- [168-row summary CSV](data/matrix/summary.csv), [analysis JSON](data/matrix/analysis.json), [independent audit](data/matrix/independent-audit.json)
-- Seven complete result archives in `downloads/matrix-B01-results.zip` through `matrix-B07-results.zip`; [shared queries/qrels](downloads/matrix-shared.zip)
-- [Reproduction guide](research/matrix/README.md), [complete matrix code](downloads/matrix-code.zip), [frozen materials](downloads/phase2-materials.zip)
-- [Publication provenance](data/matrix/provenance.json), [source changes/hashes](research/matrix/PUBLICATION_MANIFEST.json), [all release hashes](data/SHA256SUMS.json)
-- Historical [Oct 24 phase 2](https://gregorytsai.github.io/zh-en-retrieval-benchmark/en/phase2.html) and [Oct 22 baseline](https://gregorytsai.github.io/zh-en-retrieval-benchmark/en/baseline.html)
+- [Methods and downloads](https://gregorytsai.github.io/zh-en-retrieval-benchmark/en/latest-methods.html)
+- [Current comparison JSON](data/matrix/current-comparison.json), [147-row corrected CSV](data/matrix/current-summary.csv): 140 five-task rows and seven standalone ACORD rows
+- [Corrected ACORD summary/provenance](data/matrix/acord-corrected.json), [all 399 judged rankings](downloads/acord-corrected-rankings.zip), [truncated-pool diagnostics](data/matrix/acord-diagnostic.json)
+- [Timing audit](data/matrix/timing-audit.json): all 73,164 original totals exactly equal query embedding + vector search + selected reranker. Cold loading, indexing, network, queuing and answer generation are excluded.
+- Preserved original [168-row summary](data/matrix/summary.csv), [analysis JSON](data/matrix/analysis.json), [arithmetic audit](data/matrix/independent-audit.json), seven `downloads/matrix-B01-results.zip` through `matrix-B07-results.zip` archives and [shared qrels](downloads/matrix-shared.zip)
+- [Full code](downloads/matrix-code.zip), [frozen materials](downloads/phase2-materials.zip), [release hashes](data/SHA256SUMS.json)
 
-Run `python scripts/verify_matrix.py` (standard library only) for the latest raw scores and website calculations. The check passed for all 73,164 rows and 957,516 quality values. This is offline arithmetic/integrity verification, not new model inference. `verify_phase2.py` checks the preceding release; `verify_release.py` checks the original baseline plus all release hashes and HTML links. Build with `python scripts/build_site.py`, package with `python scripts/package_release.py`.
+Run `python scripts/verify_correction.py` for current metrics and payloads, and `python scripts/verify_matrix.py` for preserved raw scores. Both use the standard library, with no inference or network. `python scripts/recompute_acord.py CACHE_ROOT` replays original vector caches with NumPy; vectors are not redistributed. Full judged rank evidence supports independent arithmetic verification. Build with `python scripts/build_site.py`; package with `python scripts/package_release.py`.
 
-MLQA retains CC BY-SA 3.0; ACORD CC BY 4.0; MIRACL topics/qrels Apache 2.0. MIRACL passage text is reconstructed from pinned upstream sources with attribution, not rehosted here. Research code: MIT. Weights and private GPU/traffic logs are not included.
+The original 2,613 dataset-qualified questions are reused across 28 setups, yielding 73,164 measurements, not independent subjects. The five-task mean uses 2,556 questions per setup. No global confidence intervals or multiplicity adjustment were computed. MIRACL uses a bounded dev-judged corpus union, not the full corpus.
+
+MLQA: CC BY-SA 3.0. ACORD: CC BY 4.0. MIRACL topics/qrels: Apache 2.0. MIRACL passage text is reconstructed from pinned upstream sources rather than rehosted. Code: MIT. Model weights and private runtime logs are excluded.
 
 聯絡 / Contact: [gregorytsai@gmail.com](mailto:gregorytsai@gmail.com)

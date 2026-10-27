@@ -1,3 +1,5 @@
+> **2026-10-27 correction:** The homepage uses a five-task mean excluding ACORD. Seven standalone ACORD scores were recomputed from full vector rankings; corrected reranker scores are pending. This guide describes the preserved original run. Its original ACORD scores and six-task means are historical evidence, not current recommendations. See [corrected methods](../../en/acord.html) and run `python scripts/verify_correction.py`.
+
 # 完整28組矩陣 / Complete 28-setup matrix
 
 測量於2026-10-26完成，2026-10-27獨立重算並發布。7 embedders × 4 retrieval/reranking choices × 6 fixed conditions = 168 summaries and 73,164 accepted rows. 本套程式測檢索排序，不生成譯文。

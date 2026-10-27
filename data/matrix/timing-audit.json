@@ -1,0 +1,20 @@
+{
+  "rows_checked": 73164,
+  "maximum_sum_error_ms": 0,
+  "formula": "total_ms = embedding_ms + retrieval_ms + (rerank_ms or 0)",
+  "includes": "Warm query embedding, exact vector search, reranking. Excludes cold loading, indexing, network, queuing and generation.",
+  "five_slice_reranker_stage": {
+    "bge-reranker": {
+      "rows": 17892,
+      "p50_ms": 846.9301879405975
+    },
+    "qwen-reranker-0.6b": {
+      "rows": 17892,
+      "p50_ms": 1125.28054189682
+    },
+    "qwen-reranker-4b": {
+      "rows": 17892,
+      "p50_ms": 6207.432625055313
+    }
+  }
+}
