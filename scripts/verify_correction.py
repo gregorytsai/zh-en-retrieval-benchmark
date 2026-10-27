@@ -54,7 +54,7 @@ def verify():
  for lang in ['', 'en/']:
   s=(R/(lang+'index.html')).read_text('utf-8');payload=json.loads(re.search(r'<script id="phase-data" type="application/json">(.*?)</script>',s,re.S).group(1))
   assert payload['corrected'] and payload['scopes']==current['scopes']
-  assert len(re.findall('class="score-meter"',s))==2 and len(re.findall(r'class="score-number"><strong>0\.\d{2}</strong>',s))==2
+  assert len(re.findall('class="score-meter"',s))==6 and len(re.findall(r'class="score-number"><strong>0\.\d{2}</strong>',s))==6
   assert 'role="meter"' in s and 'aria-valuemax="1"' in s
   for p in (R/(lang+'models')).glob('*.html'):
    txt=p.read_text('utf-8');assert ('acord.html' in txt) and ('ACORD' in txt)
