@@ -1,0 +1,298 @@
+{
+  "comparison": "Qwen 4B vs BGE-M3, both with Qwen 0.6B reranker",
+  "conditions": [
+    {
+      "dataset": "eng-zho",
+      "queries": 504,
+      "clusters": 430,
+      "ndcg10": {
+        "qwen": 0.9268228573888714,
+        "bge": 0.9238174631570419,
+        "delta": 0.0030053942318294205,
+        "qwen_better_queries": 6,
+        "bge_better_queries": 6,
+        "ties": 492,
+        "paired_cluster_bootstrap_95": [
+          -0.0020743942460541205,
+          0.00909005471328726
+        ]
+      },
+      "top1": {
+        "qwen": 0.8630952380952381,
+        "bge": 0.8650793650793651,
+        "delta": -0.001984126984126984,
+        "qwen_better_queries": 1,
+        "bge_better_queries": 2,
+        "ties": 501,
+        "paired_cluster_bootstrap_95": [
+          -0.008298755186721992,
+          0.004032258064516129
+        ]
+      },
+      "recall50": {
+        "qwen": 0.9861111111111112,
+        "bge": 0.9801587301587301,
+        "delta": 0.005952380952380952,
+        "qwen_better_queries": 6,
+        "bge_better_queries": 3,
+        "ties": 495,
+        "paired_cluster_bootstrap_95": [
+          -0.005432734363924908,
+          0.01782178217821782
+        ]
+      },
+      "hit10": {
+        "qwen": 0.9761904761904762,
+        "bge": 0.9702380952380952,
+        "delta": 0.005952380952380952,
+        "qwen_better_queries": 4,
+        "bge_better_queries": 1,
+        "ties": 499,
+        "paired_cluster_bootstrap_95": [
+          -0.002,
+          0.015444015444015444
+        ]
+      }
+    },
+    {
+      "dataset": "zho-zho",
+      "queries": 504,
+      "clusters": 443,
+      "ndcg10": {
+        "qwen": 0.923339986589919,
+        "bge": 0.922146475995852,
+        "delta": 0.0011935105940669897,
+        "qwen_better_queries": 6,
+        "bge_better_queries": 7,
+        "ties": 491,
+        "paired_cluster_bootstrap_95": [
+          -0.0028751672259300326,
+          0.00561702053895256
+        ]
+      },
+      "top1": {
+        "qwen": 0.8630952380952381,
+        "bge": 0.8670634920634921,
+        "delta": -0.003968253968253968,
+        "qwen_better_queries": 0,
+        "bge_better_queries": 2,
+        "ties": 502,
+        "paired_cluster_bootstrap_95": [
+          -0.010080645161290322,
+          0.0
+        ]
+      },
+      "recall50": {
+        "qwen": 0.9841269841269841,
+        "bge": 0.9761904761904762,
+        "delta": 0.007936507936507936,
+        "qwen_better_queries": 6,
+        "bge_better_queries": 2,
+        "ties": 496,
+        "paired_cluster_bootstrap_95": [
+          -0.002012072434607646,
+          0.019880715705765408
+        ]
+      },
+      "hit10": {
+        "qwen": 0.9742063492063492,
+        "bge": 0.9662698412698413,
+        "delta": 0.007936507936507936,
+        "qwen_better_queries": 5,
+        "bge_better_queries": 1,
+        "ties": 498,
+        "paired_cluster_bootstrap_95": [
+          -4.655493482304891e-05,
+          0.01818181818181818
+        ]
+      }
+    },
+    {
+      "dataset": "eng-eng",
+      "queries": 1148,
+      "clusters": 978,
+      "ndcg10": {
+        "qwen": 0.9394189880514136,
+        "bge": 0.935009002303981,
+        "delta": 0.004409985747432474,
+        "qwen_better_queries": 15,
+        "bge_better_queries": 11,
+        "ties": 1122,
+        "paired_cluster_bootstrap_95": [
+          -0.0004972521560240038,
+          0.00983967703221666
+        ]
+      },
+      "top1": {
+        "qwen": 0.8980836236933798,
+        "bge": 0.8937282229965157,
+        "delta": 0.004355400696864111,
+        "qwen_better_queries": 7,
+        "bge_better_queries": 2,
+        "ties": 1139,
+        "paired_cluster_bootstrap_95": [
+          -0.0008620689655172414,
+          0.009623797025371828
+        ]
+      },
+      "recall50": {
+        "qwen": 0.9834494773519163,
+        "bge": 0.9764808362369338,
+        "delta": 0.006968641114982578,
+        "qwen_better_queries": 11,
+        "bge_better_queries": 3,
+        "ties": 1134,
+        "paired_cluster_bootstrap_95": [
+          0.0008680555555555555,
+          0.013841130034901658
+        ]
+      },
+      "hit10": {
+        "qwen": 0.9738675958188153,
+        "bge": 0.9695121951219512,
+        "delta": 0.004355400696864111,
+        "qwen_better_queries": 10,
+        "bge_better_queries": 5,
+        "ties": 1133,
+        "paired_cluster_bootstrap_95": [
+          -0.001813236627379873,
+          0.011304347826086957
+        ]
+      }
+    },
+    {
+      "dataset": "miracl-zh-zh",
+      "queries": 200,
+      "clusters": 200,
+      "ndcg10": {
+        "qwen": 0.8387971107389272,
+        "bge": 0.8387971107389272,
+        "delta": 0.0,
+        "qwen_better_queries": 0,
+        "bge_better_queries": 0,
+        "ties": 200,
+        "paired_cluster_bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "top1": {
+        "qwen": 0.69,
+        "bge": 0.69,
+        "delta": 0.0,
+        "qwen_better_queries": 0,
+        "bge_better_queries": 0,
+        "ties": 200,
+        "paired_cluster_bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "recall50": {
+        "qwen": 1.0,
+        "bge": 1.0,
+        "delta": 0.0,
+        "qwen_better_queries": 0,
+        "bge_better_queries": 0,
+        "ties": 200,
+        "paired_cluster_bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "hit10": {
+        "qwen": 1.0,
+        "bge": 1.0,
+        "delta": 0.0,
+        "qwen_better_queries": 0,
+        "bge_better_queries": 0,
+        "ties": 200,
+        "paired_cluster_bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "dataset": "miracl-en-en",
+      "queries": 200,
+      "clusters": 200,
+      "ndcg10": {
+        "qwen": 0.8582915653115927,
+        "bge": 0.8584782149272243,
+        "delta": -0.0001866496156316605,
+        "qwen_better_queries": 0,
+        "bge_better_queries": 1,
+        "ties": 199,
+        "paired_cluster_bootstrap_95": [
+          -0.0005599488468949814,
+          0.0
+        ]
+      },
+      "top1": {
+        "qwen": 0.775,
+        "bge": 0.775,
+        "delta": 0.0,
+        "qwen_better_queries": 0,
+        "bge_better_queries": 0,
+        "ties": 200,
+        "paired_cluster_bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "recall50": {
+        "qwen": 1.0,
+        "bge": 1.0,
+        "delta": 0.0,
+        "qwen_better_queries": 0,
+        "bge_better_queries": 0,
+        "ties": 200,
+        "paired_cluster_bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "hit10": {
+        "qwen": 1.0,
+        "bge": 1.0,
+        "delta": 0.0,
+        "qwen_better_queries": 0,
+        "bge_better_queries": 0,
+        "ties": 200,
+        "paired_cluster_bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  ],
+  "weights_gib": {
+    "qwen-4b": 4.5810025334358215,
+    "bge-m3": 1.186232179403305
+  },
+  "macro": {
+    "ndcg10": {
+      "qwen": 0.8973341016161448,
+      "bge": 0.8956496534246052
+    },
+    "top1": {
+      "qwen": 0.8178548199767712,
+      "bge": 0.8181742160278745
+    },
+    "recall50": {
+      "qwen": 0.9907375145180023,
+      "bge": 0.986566008517228
+    },
+    "hit10": {
+      "qwen": 0.9848528842431281,
+      "bge": 0.9812040263259776
+    }
+  },
+  "method": "Same 2,556 dataset-qualified queries; 5 task means equally weighted. Per-task paired passage-cluster percentile bootstrap: 10,000 resamples, seed 20261027. MIRACL clusters use stored query IDs. Intervals are descriptive, unadjusted for multiple comparisons. No overall bootstrap because cross-language dependence is not modeled. ACORD reranking excluded pending correction.",
+  "source_rows_sha256": {
+    "B01": "c4d58f77dd7ee28fab138e3c72e61dadc0efb813423185bb8f1ce9e09e1aa348",
+    "B05": "9a0f14173500dfb4535e2f421fc47ea4d37bc304f524b7112ded3607410de486"
+  },
+  "new_inference": false
+}

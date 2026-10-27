@@ -5,7 +5,7 @@ const scope=document.querySelector('#scope'),metric=document.querySelector('#met
 let sortKey=metric.value,sortDescending=true,expanded=false;
 const label=k=>k==='standalone'?say('不加重排器','No reranker'):PHASE.names[k];
 const title=r=>label(r.embedding)+(r.reranker==='standalone'?say('（單獨）',' (alone)'):' + '+label(r.reranker));
-const score=(x,k)=>k==='top1'||k==='recall50'||k==='judged_coverage50'?(100*x).toFixed(2)+'%':x.toFixed(4);
+const score=(x,k)=>k==='top1'||k==='recall50'||k==='judged_coverage50'?(100*x).toFixed(2)+'%':x.toFixed(3);
 const time=x=>x===null?'—':x<100?x.toFixed(2)+' ms':(x/1000).toFixed(2)+' s';
 const cols=[['embedding',say('Embedder','Embedder')],['reranker',say('重排器','Reranker')],['top1','Top-1'],['ndcg10','nDCG@10'],['mrr10','MRR@10'],['recall50','Recall@50'],['total_ms_mean',say('查詢總時間（平均）','Total query time (mean)')],['total_ms_p50',say('總時間 p50','Total p50')],['total_ms_p95',say('總時間 p95','Total p95')],['weight_gib_sum',say('權重 GiB','Weights GiB')]];
 function el(tag,text,cls){const node=document.createElement(tag);if(text!==undefined)node.textContent=text;if(cls)node.className=cls;return node;}
@@ -27,7 +27,7 @@ function render(){
   const track=el('div',undefined,'phase-track');track.setAttribute('role','img');track.setAttribute('aria-label',title(r)+' '+metric.value+' '+score(v,metric.value)+', '+say('單獨檢索 ','baseline ')+score(b,metric.value));
   const fill=el('span',undefined,'phase-base');fill.style.width=Math.min(v,b)*100+'%';track.append(fill);
   if(delta!==0){const extra=el('span',undefined,delta>0?'phase-gain':'phase-loss');extra.style.left=Math.min(v,b)*100+'%';extra.style.width=Math.abs(delta)*100+'%';track.append(extra);}
-  const deltaLabel=['ndcg10','mrr10'].includes(metric.value)?(delta>=0?'+':'')+delta.toFixed(4):(delta>=0?'+':'')+(delta*100).toFixed(2)+' pp';
+  const deltaLabel=['ndcg10','mrr10'].includes(metric.value)?(delta>=0?'+':'')+delta.toFixed(3):(delta>=0?'+':'')+(delta*100).toFixed(2)+' pp';
   const val=el('div',undefined,'phase-bar-value');val.append(el('strong',score(v,metric.value)),el('small',r.reranker==='standalone'?say('基準','Baseline'):deltaLabel));
   row.append(text,track,val);bars.append(row);
  }

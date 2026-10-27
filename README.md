@@ -6,11 +6,12 @@
 
 | Five-task equal-weight mean | nDCG@10 | Top-1 | Q8_0 weights |
 |---|---:|---:|---:|
-| Qwen 8B + Qwen 4B reranker | 0.9190 | 85.42% | 11.480 GiB |
-| Qwen 4B + Qwen 4B reranker | 0.9180 | 85.30% | 7.972 GiB |
-| BGE-M3 + Qwen 0.6B reranker | 0.8956 | 81.82% | 1.186 GiB |
-| Qwen 0.6B + Qwen 0.6B reranker | 0.8940 | 81.57% | 1.191 GiB |
-| Qwen 8B alone | 0.8667 | 77.24% | 7.494 GiB |
+| Qwen 8B + Qwen 4B reranker | 0.919 | 85.42% | 11.480 GiB |
+| Qwen 4B + Qwen 4B reranker | 0.918 | 85.30% | 7.972 GiB |
+| Qwen 4B + Qwen 0.6B reranker | 0.897 | 81.79% | 4.581 GiB |
+| BGE-M3 + Qwen 0.6B reranker | 0.896 | 81.82% | 1.186 GiB |
+| Qwen 0.6B + Qwen 0.6B reranker | 0.894 | 81.57% | 1.191 GiB |
+| Qwen 8B alone | 0.867 | 77.24% | 7.494 GiB |
 
 A small embedder with a small reranker exceeds a large embedder alone on this dataset, with a latency tradeoff: Qwen 0.6B + 0.6B averages about 1.08 s per query, versus about 52 ms for Qwen 8B alone. File size is not measured RAM/VRAM. This is local Q8_0 / Metal performance on M3 Ultra, 256 GiB.
 
@@ -28,6 +29,7 @@ Rerankers scored only the old Top50 pool. Filtering that pool is a truncated dia
 
 ## Inspect and reproduce
 
+- [Qwen 4B vs BGE-M3 with the same Qwen 0.6B reranker](https://gregorytsai.github.io/zh-en-retrieval-benchmark/en/pair-comparison.html): all 2,556 paired queries, task-level gains and losses, and exploratory passage-cluster bootstrap intervals. Qwen gains five net first-result hits on 1,148 English queries, but has no Chinese Top-1 advantage. The additional 3.395 GiB of weights is a conditional upgrade, not a universal recommendation. Recompute with `python scripts/compare_qwen_bge.py` (NumPy required, no inference).
 - [Methods and downloads](https://gregorytsai.github.io/zh-en-retrieval-benchmark/en/latest-methods.html)
 - [Current comparison JSON](data/matrix/current-comparison.json), [147-row corrected CSV](data/matrix/current-summary.csv): 140 five-task rows and seven standalone ACORD rows
 - [Corrected ACORD summary/provenance](data/matrix/acord-corrected.json), [all 399 judged rankings](downloads/acord-corrected-rankings.zip), [truncated-pool diagnostics](data/matrix/acord-diagnostic.json)
