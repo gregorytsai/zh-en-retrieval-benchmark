@@ -1,0 +1,307 @@
+{
+  "batch2-miracl-validation.json": {
+    "original_sha256": "e6d0233202de436abdaa9a99d7678ddfff928e6d93d4efb8ba944595d1277a32",
+    "published_sha256": "e6d0233202de436abdaa9a99d7678ddfff928e6d93d4efb8ba944595d1277a32",
+    "change": "Public metadata: private local paths omitted; working plan is a new blank template"
+  },
+  "BATCH2_DOWNLOAD_MANIFEST.json": {
+    "original_sha256": "f1905395f19ac86e459d1da94b144101beca89a3e663e00bdb856ba86ffa8a7c",
+    "published_sha256": "f1905395f19ac86e459d1da94b144101beca89a3e663e00bdb856ba86ffa8a7c",
+    "change": "Public metadata: private local paths omitted; working plan is a new blank template"
+  },
+  "CONTINUATION_V4_FREEZE_MANIFEST.json": {
+    "original_sha256": "be5c0cb59c4d3ca2a2cb945fab6db5e2b0d79f92059d386dcb6733a12033abe1",
+    "published_sha256": "3c3157aefb3e64701f1032291a6cf2563b538c37303837c449f3ae7f4c7bec8a",
+    "change": "Public metadata: private local paths omitted; working plan is a new blank template"
+  },
+  "data-validation.json": {
+    "original_sha256": "64885297428be4358d245917bc2ad2a12ceb2628d363bed2cdf1ad6af83a8c9a",
+    "published_sha256": "d198c48c1e629f879d3d16bcf166bbdf0d70b7dc1a87b41d76fae779628818bf",
+    "change": "Public metadata: private local paths omitted; working plan is a new blank template"
+  },
+  "DOWNLOAD_MANIFEST.json": {
+    "original_sha256": "382f9fd910d2666be24ce549dc90dff6566cadae4e95c5d844e81f60ecdb6df1",
+    "published_sha256": "84a193d62a479067e0a27fe4ba2062c2900a3addf0960dfd439bae53ab650a7d",
+    "change": "Public metadata: private local paths omitted; working plan is a new blank template"
+  },
+  "fetch_miracl_missing.py": {
+    "original_sha256": "e492c876dfe5d152b6f5f9bd3775ac0ba58d03d245737b6b2f3ee8351150adca",
+    "published_sha256": "e492c876dfe5d152b6f5f9bd3775ac0ba58d03d245737b6b2f3ee8351150adca",
+    "change": "Unmodified original Python source"
+  },
+  "FULL_MATRIX_PLAN_ZH_TW.md": {
+    "original_sha256": "cfeacb1415a01b82df27031b4fd8a3a5892bec54195f31057cee5e9a3b5f05e2",
+    "published_sha256": "d0e17657266d091090523e8adf757ff2d246b82727e54c57ca0941a25b2fb4a6",
+    "change": "Public metadata: private local paths omitted; working plan is a new blank template"
+  },
+  "prepare_batch2_data.py": {
+    "original_sha256": "06495000d64a77401032580996f7d4f5c82616831c68e6f1857ea008fcd805f3",
+    "published_sha256": "06495000d64a77401032580996f7d4f5c82616831c68e6f1857ea008fcd805f3",
+    "change": "Unmodified original Python source"
+  },
+  "prepare_phase2_data.py": {
+    "original_sha256": "273a917065c5d4cc2ed6854c6f88d8be00f1875892c850a69f13023b2efca045",
+    "published_sha256": "273a917065c5d4cc2ed6854c6f88d8be00f1875892c850a69f13023b2efca045",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner/batch_progress.py": {
+    "original_sha256": "3593810ff5c841673d96e8a417257aff201dc8f7913ffe7df2797caa96fe3377",
+    "published_sha256": "3593810ff5c841673d96e8a417257aff201dc8f7913ffe7df2797caa96fe3377",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner/core.py": {
+    "original_sha256": "9c58d309c35a7a7e5879c57bdbc34d30b845a56143f90cacdf368222f03d1f4d",
+    "published_sha256": "9c58d309c35a7a7e5879c57bdbc34d30b845a56143f90cacdf368222f03d1f4d",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner/guarded_engine.py": {
+    "original_sha256": "24838aba5e85aa842e6ed24e61e603d02cdd5fd6a1325a2c3f647d10d51f0b0a",
+    "published_sha256": "24838aba5e85aa842e6ed24e61e603d02cdd5fd6a1325a2c3f647d10d51f0b0a",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner/matrix_spec.py": {
+    "original_sha256": "11b76c9a09e5ce5e003aafc9be760cc2c02ea8917d0cc7def9d05f4241a36074",
+    "published_sha256": "11b76c9a09e5ce5e003aafc9be760cc2c02ea8917d0cc7def9d05f4241a36074",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner/pilot_forecast.py": {
+    "original_sha256": "7f5c92b105fae82f754440e77861356e57547f9381e746de8de17bad0fbf28db",
+    "published_sha256": "7f5c92b105fae82f754440e77861356e57547f9381e746de8de17bad0fbf28db",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner/run_full_matrix.py": {
+    "original_sha256": "06eec6eb9e9bd497bc870dd4eb8404f53c7cd571d73618f6de356a5e91f8b758",
+    "published_sha256": "06eec6eb9e9bd497bc870dd4eb8404f53c7cd571d73618f6de356a5e91f8b758",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner/run_sequence.py": {
+    "original_sha256": "fdd19b3d723ff9266c7631f8fd6dff0b7b7c10204b3bc160c9b779aa90157fef",
+    "published_sha256": "fdd19b3d723ff9266c7631f8fd6dff0b7b7c10204b3bc160c9b779aa90157fef",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner/server_helper.py": {
+    "original_sha256": "e0e12865c13c819b9ed14e377791d871e43f7505b328df61bfe848b8cc512769",
+    "published_sha256": "e0e12865c13c819b9ed14e377791d871e43f7505b328df61bfe848b8cc512769",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner/test_batch_progress.py": {
+    "original_sha256": "fa056e40660e252ab9b1562ca687c70aba2194bba7caad36f35aa62286673852",
+    "published_sha256": "fa056e40660e252ab9b1562ca687c70aba2194bba7caad36f35aa62286673852",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner/test_cli_and_forecast.py": {
+    "original_sha256": "675b05d6a143b085b83378f4f4ec2eb264640ad3b102eff08a47940c6e44565b",
+    "published_sha256": "675b05d6a143b085b83378f4f4ec2eb264640ad3b102eff08a47940c6e44565b",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner/test_engine.py": {
+    "original_sha256": "5de6c966220a43270b1f0a71c4cf7e85cbc13523101b2aa5c39b18b83953ec33",
+    "published_sha256": "5de6c966220a43270b1f0a71c4cf7e85cbc13523101b2aa5c39b18b83953ec33",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner/test_engine_orchestration.py": {
+    "original_sha256": "9a2586b9c447fff012f08c6858efe4aadba12744322fabe8b17b999d5d7eab77",
+    "published_sha256": "9a2586b9c447fff012f08c6858efe4aadba12744322fabe8b17b999d5d7eab77",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner/test_live_guard.py": {
+    "original_sha256": "327bd9759d3f3f7d1688dbf2d8b09cd2a7a2c939e43dd7f9c23fc6cb966299fd",
+    "published_sha256": "327bd9759d3f3f7d1688dbf2d8b09cd2a7a2c939e43dd7f9c23fc6cb966299fd",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner/test_matrix_spec.py": {
+    "original_sha256": "cfc8f26028f8d3066f4986431fef38a48bb579fe289e8743c464fe570212f266",
+    "published_sha256": "cfc8f26028f8d3066f4986431fef38a48bb579fe289e8743c464fe570212f266",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner/test_sequence.py": {
+    "original_sha256": "5fb0c1ed560107a35d59cb3a621cfe0c121c64365e00232a36e424911786a561",
+    "published_sha256": "5fb0c1ed560107a35d59cb3a621cfe0c121c64365e00232a36e424911786a561",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner/traffic_guard.py": {
+    "original_sha256": "83014923ccf9db2ae2e97878a457e85a8556ecbdda5ab34fe9a541738fa73dcd",
+    "published_sha256": "83014923ccf9db2ae2e97878a457e85a8556ecbdda5ab34fe9a541738fa73dcd",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v3/batch_progress.py": {
+    "original_sha256": "64b795c2c66d4dda53d3ffc02d946fd8f34ef673a5f8798bc8c0512d1d970053",
+    "published_sha256": "64b795c2c66d4dda53d3ffc02d946fd8f34ef673a5f8798bc8c0512d1d970053",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v3/core.py": {
+    "original_sha256": "9c58d309c35a7a7e5879c57bdbc34d30b845a56143f90cacdf368222f03d1f4d",
+    "published_sha256": "9c58d309c35a7a7e5879c57bdbc34d30b845a56143f90cacdf368222f03d1f4d",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v3/guarded_engine.py": {
+    "original_sha256": "c115efeafc9e5b894067a4967d462648841985ac4e3ba995395161593e0c9b1c",
+    "published_sha256": "c115efeafc9e5b894067a4967d462648841985ac4e3ba995395161593e0c9b1c",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v3/matrix_spec.py": {
+    "original_sha256": "5ea7b36b3d262566d91356eadc2ce7ddfae0b43e68cc037a56e67508b1e9cb01",
+    "published_sha256": "5ea7b36b3d262566d91356eadc2ce7ddfae0b43e68cc037a56e67508b1e9cb01",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v3/pilot_forecast.py": {
+    "original_sha256": "5d27d7cb1581302487756766101190cd471948b5ce6336ede3dec8bd7b0f4f56",
+    "published_sha256": "5d27d7cb1581302487756766101190cd471948b5ce6336ede3dec8bd7b0f4f56",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v3/run_full_matrix.py": {
+    "original_sha256": "081c0e190fd982dac91ec927bbe9abdbf7789bb7ba5e592ec54fe3688cb825e7",
+    "published_sha256": "081c0e190fd982dac91ec927bbe9abdbf7789bb7ba5e592ec54fe3688cb825e7",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v3/run_sequence.py": {
+    "original_sha256": "5109754776fb67c4e140b2e7feb56477d2ef02433f84169803a489d16df82f09",
+    "published_sha256": "5109754776fb67c4e140b2e7feb56477d2ef02433f84169803a489d16df82f09",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v3/server_helper.py": {
+    "original_sha256": "e0e12865c13c819b9ed14e377791d871e43f7505b328df61bfe848b8cc512769",
+    "published_sha256": "e0e12865c13c819b9ed14e377791d871e43f7505b328df61bfe848b8cc512769",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v3/test_batch_progress.py": {
+    "original_sha256": "fa056e40660e252ab9b1562ca687c70aba2194bba7caad36f35aa62286673852",
+    "published_sha256": "fa056e40660e252ab9b1562ca687c70aba2194bba7caad36f35aa62286673852",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v3/test_cli_and_forecast.py": {
+    "original_sha256": "d108b9a95d9ddf8f4019c97f24fe8c7c20e1c66ad34e554f53c731134bb71015",
+    "published_sha256": "d108b9a95d9ddf8f4019c97f24fe8c7c20e1c66ad34e554f53c731134bb71015",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v3/test_continuation_import.py": {
+    "original_sha256": "ac5448545e5f130f7b07de4b1cc9eb512d0b9c146777c7f6be4d92fd581cf071",
+    "published_sha256": "ac5448545e5f130f7b07de4b1cc9eb512d0b9c146777c7f6be4d92fd581cf071",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v3/test_engine.py": {
+    "original_sha256": "5de6c966220a43270b1f0a71c4cf7e85cbc13523101b2aa5c39b18b83953ec33",
+    "published_sha256": "5de6c966220a43270b1f0a71c4cf7e85cbc13523101b2aa5c39b18b83953ec33",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v3/test_engine_orchestration.py": {
+    "original_sha256": "9a2586b9c447fff012f08c6858efe4aadba12744322fabe8b17b999d5d7eab77",
+    "published_sha256": "9a2586b9c447fff012f08c6858efe4aadba12744322fabe8b17b999d5d7eab77",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v3/test_live_guard.py": {
+    "original_sha256": "327bd9759d3f3f7d1688dbf2d8b09cd2a7a2c939e43dd7f9c23fc6cb966299fd",
+    "published_sha256": "327bd9759d3f3f7d1688dbf2d8b09cd2a7a2c939e43dd7f9c23fc6cb966299fd",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v3/test_matrix_spec.py": {
+    "original_sha256": "ede3fd6ce214cbbcf8e6bbda5b2f198390e80492f7be01f9b9f63eeaa1f1681b",
+    "published_sha256": "ede3fd6ce214cbbcf8e6bbda5b2f198390e80492f7be01f9b9f63eeaa1f1681b",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v3/test_sequence.py": {
+    "original_sha256": "eb12bbe1db159a8eb26ed342cfbaf27608c130dd1a146788157bbbb0382c9713",
+    "published_sha256": "eb12bbe1db159a8eb26ed342cfbaf27608c130dd1a146788157bbbb0382c9713",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v3/traffic_guard.py": {
+    "original_sha256": "83014923ccf9db2ae2e97878a457e85a8556ecbdda5ab34fe9a541738fa73dcd",
+    "published_sha256": "83014923ccf9db2ae2e97878a457e85a8556ecbdda5ab34fe9a541738fa73dcd",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v4/batch_progress.py": {
+    "original_sha256": "c27cdb8e27bccf64979be615d787dd7a0f15d4e2ab21256723fc12dedcce9a3a",
+    "published_sha256": "c27cdb8e27bccf64979be615d787dd7a0f15d4e2ab21256723fc12dedcce9a3a",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v4/core.py": {
+    "original_sha256": "9c58d309c35a7a7e5879c57bdbc34d30b845a56143f90cacdf368222f03d1f4d",
+    "published_sha256": "9c58d309c35a7a7e5879c57bdbc34d30b845a56143f90cacdf368222f03d1f4d",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v4/guarded_engine.py": {
+    "original_sha256": "c115efeafc9e5b894067a4967d462648841985ac4e3ba995395161593e0c9b1c",
+    "published_sha256": "c115efeafc9e5b894067a4967d462648841985ac4e3ba995395161593e0c9b1c",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v4/matrix_spec.py": {
+    "original_sha256": "5ea7b36b3d262566d91356eadc2ce7ddfae0b43e68cc037a56e67508b1e9cb01",
+    "published_sha256": "5ea7b36b3d262566d91356eadc2ce7ddfae0b43e68cc037a56e67508b1e9cb01",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v4/pilot_forecast.py": {
+    "original_sha256": "5d27d7cb1581302487756766101190cd471948b5ce6336ede3dec8bd7b0f4f56",
+    "published_sha256": "5d27d7cb1581302487756766101190cd471948b5ce6336ede3dec8bd7b0f4f56",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v4/prepare_v4_continuation.py": {
+    "original_sha256": "bc64373156ac50c621eb8dfc633866f05b0e1836e45ef138e3faaa66ec72d9eb",
+    "published_sha256": "bc64373156ac50c621eb8dfc633866f05b0e1836e45ef138e3faaa66ec72d9eb",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v4/run_full_matrix.py": {
+    "original_sha256": "081c0e190fd982dac91ec927bbe9abdbf7789bb7ba5e592ec54fe3688cb825e7",
+    "published_sha256": "081c0e190fd982dac91ec927bbe9abdbf7789bb7ba5e592ec54fe3688cb825e7",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v4/run_sequence.py": {
+    "original_sha256": "d165341a92e5b63ace422d1dfc42ac787633e1e261bb327a830ecb253ecff9c8",
+    "published_sha256": "d165341a92e5b63ace422d1dfc42ac787633e1e261bb327a830ecb253ecff9c8",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v4/server_helper.py": {
+    "original_sha256": "e0e12865c13c819b9ed14e377791d871e43f7505b328df61bfe848b8cc512769",
+    "published_sha256": "e0e12865c13c819b9ed14e377791d871e43f7505b328df61bfe848b8cc512769",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v4/test_batch_progress.py": {
+    "original_sha256": "fa056e40660e252ab9b1562ca687c70aba2194bba7caad36f35aa62286673852",
+    "published_sha256": "fa056e40660e252ab9b1562ca687c70aba2194bba7caad36f35aa62286673852",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v4/test_cli_and_forecast.py": {
+    "original_sha256": "d108b9a95d9ddf8f4019c97f24fe8c7c20e1c66ad34e554f53c731134bb71015",
+    "published_sha256": "d108b9a95d9ddf8f4019c97f24fe8c7c20e1c66ad34e554f53c731134bb71015",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v4/test_continuation_import.py": {
+    "original_sha256": "ac5448545e5f130f7b07de4b1cc9eb512d0b9c146777c7f6be4d92fd581cf071",
+    "published_sha256": "ac5448545e5f130f7b07de4b1cc9eb512d0b9c146777c7f6be4d92fd581cf071",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v4/test_engine.py": {
+    "original_sha256": "5de6c966220a43270b1f0a71c4cf7e85cbc13523101b2aa5c39b18b83953ec33",
+    "published_sha256": "5de6c966220a43270b1f0a71c4cf7e85cbc13523101b2aa5c39b18b83953ec33",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v4/test_engine_orchestration.py": {
+    "original_sha256": "9a2586b9c447fff012f08c6858efe4aadba12744322fabe8b17b999d5d7eab77",
+    "published_sha256": "9a2586b9c447fff012f08c6858efe4aadba12744322fabe8b17b999d5d7eab77",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v4/test_live_guard.py": {
+    "original_sha256": "327bd9759d3f3f7d1688dbf2d8b09cd2a7a2c939e43dd7f9c23fc6cb966299fd",
+    "published_sha256": "327bd9759d3f3f7d1688dbf2d8b09cd2a7a2c939e43dd7f9c23fc6cb966299fd",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v4/test_matrix_spec.py": {
+    "original_sha256": "ede3fd6ce214cbbcf8e6bbda5b2f198390e80492f7be01f9b9f63eeaa1f1681b",
+    "published_sha256": "ede3fd6ce214cbbcf8e6bbda5b2f198390e80492f7be01f9b9f63eeaa1f1681b",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v4/test_real_b02_split_integration.py": {
+    "original_sha256": "7bec4f4493c514bd03bae22e6b329b60f22418a4767e3b4303e27f7703f141ba",
+    "published_sha256": "7bec4f4493c514bd03bae22e6b329b60f22418a4767e3b4303e27f7703f141ba",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v4/test_sequence.py": {
+    "original_sha256": "eb12bbe1db159a8eb26ed342cfbaf27608c130dd1a146788157bbbb0382c9713",
+    "published_sha256": "eb12bbe1db159a8eb26ed342cfbaf27608c130dd1a146788157bbbb0382c9713",
+    "change": "Unmodified original Python source"
+  },
+  "full-matrix-runner-continuation-v4/traffic_guard.py": {
+    "original_sha256": "83014923ccf9db2ae2e97878a457e85a8556ecbdda5ab34fe9a541738fa73dcd",
+    "published_sha256": "83014923ccf9db2ae2e97878a457e85a8556ecbdda5ab34fe9a541738fa73dcd",
+    "change": "Unmodified original Python source"
+  }
+}

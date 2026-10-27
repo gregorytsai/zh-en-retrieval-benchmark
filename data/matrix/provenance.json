@@ -1,0 +1,126 @@
+{
+  "B01/run-manifest.json": {
+    "original_sha256": "f0dff96904ac5e82a2c1627b33501d0f29a69d2cb1bde95e7fb59de708b91484",
+    "public_metadata": "local paths removed where present"
+  },
+  "B01/batch-completion-audit.json": {
+    "original_sha256": "4639ebaafef2661ee8fd800e9bf66b297cf5334d48e445d7e7ab666f966523ba",
+    "public_metadata": "local paths removed where present"
+  },
+  "B01/committed.json": {
+    "original_sha256": "2ad98852d97a6866a7e457e2e452e1246ac5f3fb51415d9451b71c373654bd40",
+    "public_metadata": "local paths removed where present"
+  },
+  "B01/index-stats.jsonl": {
+    "original_sha256": "cb808333d575f708d99d2f4493a2d4df95d201ef6d3ae5987026dfa38b28471f",
+    "public_metadata": "local paths removed where present"
+  },
+  "B02/batch-completion-audit.json": {
+    "original_sha256": "a9bddb66e18e809c0ec0bfdce87854392284bf5ec14326761907e48769bbd80f",
+    "public_metadata": "local paths removed where present"
+  },
+  "B02-A/run-manifest.json": {
+    "original_sha256": "fa15c34fe7d0d30be1cc07ad6ac3ed796661c19bff64f93b309cbebab6dde065",
+    "public_metadata": "local paths removed where present"
+  },
+  "B02-A/subbatch-completion-audit.json": {
+    "original_sha256": "0d3926044d9b5a7b2e1088068337eabd7af6561c115aaf948aae346e02e84be7",
+    "public_metadata": "local paths removed where present"
+  },
+  "B02-A/index-stats.jsonl": {
+    "original_sha256": "86308ca95c23a5ca48ed2a307099c50fdb624999ae4aaa160ebb85b84c8b351c",
+    "public_metadata": "local paths removed where present"
+  },
+  "B02-B/run-manifest.json": {
+    "original_sha256": "50c14e5bf95505f852e9a1d7175b577f4ff1f1ef137e42cea9fdff3ac15e1d2f",
+    "public_metadata": "local paths removed where present"
+  },
+  "B02-B/subbatch-completion-audit.json": {
+    "original_sha256": "3a5a4dfd44ae0a4caabf2d0fe69a1a08e8f9e0d55109a49304215b26c31c1af1",
+    "public_metadata": "local paths removed where present"
+  },
+  "B02-B/index-stats.jsonl": {
+    "original_sha256": "eb307adb470371de759e60830ad4764162a241003930621d95efbf70d4289e4a",
+    "public_metadata": "local paths removed where present"
+  },
+  "B03/run-manifest.json": {
+    "original_sha256": "4e0c89dde11a044a98eca335206eea38943ae7d4b7d2029d8f328d33ac63956f",
+    "public_metadata": "local paths removed where present"
+  },
+  "B03/batch-completion-audit.json": {
+    "original_sha256": "b524ab46c011812d1af1867c4717036290050fe08ca82786f90badebf27af583",
+    "public_metadata": "local paths removed where present"
+  },
+  "B03/committed.json": {
+    "original_sha256": "9517a6db0e4f0e61ce85721ef31f9bf23c95115e132dadee26a7dd5bfb277902",
+    "public_metadata": "local paths removed where present"
+  },
+  "B03/index-stats.jsonl": {
+    "original_sha256": "2951f0f6673af1c54b14fc044f9e72e0b9a373ec9ec59cf1640027c414ced59b",
+    "public_metadata": "local paths removed where present"
+  },
+  "B04/run-manifest.json": {
+    "original_sha256": "015732c2b2a85bc284e58dbae50af4d7e07e2f6af6058dcdbde087d0257dcb58",
+    "public_metadata": "local paths removed where present"
+  },
+  "B04/batch-completion-audit.json": {
+    "original_sha256": "51e245491289537db8fe7220c624ad12daed4fc86d1142aeeeddc880e3b4b6b4",
+    "public_metadata": "local paths removed where present"
+  },
+  "B04/committed.json": {
+    "original_sha256": "ef8868fdc06879cb4a04a4977317f0b69af58bc55d61b008c1cf1118df7c6bbc",
+    "public_metadata": "local paths removed where present"
+  },
+  "B04/index-stats.jsonl": {
+    "original_sha256": "00a5698d1974192dd4df7b2487383aea67ef4401faa9be379424d64fcf250984",
+    "public_metadata": "local paths removed where present"
+  },
+  "B05/run-manifest.json": {
+    "original_sha256": "06a15057ad6985306a7bfbf7903b0614f948aa9c6f6198c1d9270d7b88772c0b",
+    "public_metadata": "local paths removed where present"
+  },
+  "B05/batch-completion-audit.json": {
+    "original_sha256": "198a1e4821df54b69e0ef3564fbfddf3c1573c31ebb867f98b5595692b4e7063",
+    "public_metadata": "local paths removed where present"
+  },
+  "B05/committed.json": {
+    "original_sha256": "a3f769c64de2814207831afc19cf1fc4412b3ed435d3a63696bf0146bc9a7093",
+    "public_metadata": "local paths removed where present"
+  },
+  "B05/index-stats.jsonl": {
+    "original_sha256": "dc22ae8eb1cf8115cf9a47b91b71583dd12d1fc702ae0e241b62e128c8e54313",
+    "public_metadata": "local paths removed where present"
+  },
+  "B06/run-manifest.json": {
+    "original_sha256": "fcc0244a783c554484de1d1a16ed19cc5bf2764d8392a8053277bf96c6a90635",
+    "public_metadata": "local paths removed where present"
+  },
+  "B06/batch-completion-audit.json": {
+    "original_sha256": "3dc686fd0fe05ea4aff44e411166eb2ebdcee25ad04ec0f1628c7ba2242b65e8",
+    "public_metadata": "local paths removed where present"
+  },
+  "B06/committed.json": {
+    "original_sha256": "8e34c2d1413b55a0cf83a4249a20fa579d72e8fb342f3356ff2974c2247b0dad",
+    "public_metadata": "local paths removed where present"
+  },
+  "B06/index-stats.jsonl": {
+    "original_sha256": "7ce3e60d67b083d1cc16554c94ce057c57f6806a6b4ee2f5c3ad58eeb0b471b0",
+    "public_metadata": "local paths removed where present"
+  },
+  "B07/run-manifest.json": {
+    "original_sha256": "78aa8014de684764e811def2aef65da6c2f35605badd107c57414043345da7a8",
+    "public_metadata": "local paths removed where present"
+  },
+  "B07/batch-completion-audit.json": {
+    "original_sha256": "a14f03b0a52f3caf07ab6775c527a8c488adb9b04b29acc5af32bb4f7295d341",
+    "public_metadata": "local paths removed where present"
+  },
+  "B07/committed.json": {
+    "original_sha256": "150c88913e6b66f4c0af0dd8d25b4f4cf7cb0d3a9abf6568443de94224530d5e",
+    "public_metadata": "local paths removed where present"
+  },
+  "B07/index-stats.jsonl": {
+    "original_sha256": "ca6adc237de89fc396bc64d5da64878d3716531ffd3ac536593ac42080500967",
+    "public_metadata": "local paths removed where present"
+  }
+}

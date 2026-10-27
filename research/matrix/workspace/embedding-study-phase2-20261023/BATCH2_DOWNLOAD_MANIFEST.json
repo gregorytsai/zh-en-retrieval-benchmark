@@ -1,0 +1,84 @@
+{
+  "collected_date": "2026-10-23",
+  "purpose": "Batch 2 preparation; draft data not approved for inference",
+  "sources": {
+    "miracl_topics_qrels": {
+      "base_url": "https://huggingface.co/datasets/miracl/miracl/resolve/5be20db9509754dadad47689368639fcec739c00/",
+      "license": "Apache-2.0"
+    },
+    "miracl_passages": {
+      "base_url": "https://huggingface.co/datasets/miracl/nomiracl/resolve/ecd08778d0426a5ca28ac99763b0c9ddc2c78e68/data/",
+      "paths": [
+        "chinese/corpus.jsonl.gz",
+        "english/corpus.jsonl.gz"
+      ],
+      "license": "Apache-2.0 as declared by author; retain Wikipedia attribution"
+    },
+    "miracl_zh_supplement": {
+      "url": "https://huggingface.co/datasets/miracl/miracl-corpus/resolve/d921ec7e349ce0d28daf30b2da9da5ee698bef0d/miracl-corpus-v1.0-zh/docs-0.jsonl.gz",
+      "reason": "Only shard 0 to recover 21 missing judged docs; full corpus not downloaded; official LFS hash verified"
+    },
+    "qasper": {
+      "url": "https://qasper-dataset.s3.us-west-2.amazonaws.com/qasper-test-and-evaluator-v0.3.tgz?versionId=MWliK0rgHeKzeNbQ_AmemEkriliL7eHF",
+      "card_revision": "fdc9d8214fbab5dd782958601db4d678e6934a54",
+      "license": "CC-BY-4.0"
+    }
+  },
+  "files": [
+    {
+      "path": "sources/miracl/MIRACL_README.md",
+      "bytes": 3557,
+      "sha256": "218fdac67872c9732e8b35416c650582837c27923a7e579ab2d4f446a3199218"
+    },
+    {
+      "path": "sources/miracl/NOMIRACL_README.md",
+      "bytes": 8078,
+      "sha256": "0e09dcea3161e578a52ffab1eebd6478b2ae1dee16e1121cce7f1d2081b9d9e6"
+    },
+    {
+      "path": "sources/miracl/en/passages.jsonl.gz",
+      "bytes": 9692742,
+      "sha256": "f333c75491c8dac69f946b021511a67666318efb799dff3a6d927a841f8148eb"
+    },
+    {
+      "path": "sources/miracl/en/qrels-dev.tsv",
+      "bytes": 167817,
+      "sha256": "a0af836c300e85088c4d73449492e2378280f967cac032853c9e11f3bc8a8d81"
+    },
+    {
+      "path": "sources/miracl/en/topics-dev.tsv",
+      "bytes": 36782,
+      "sha256": "25d9e6d17656674fd7aa3b67ee912c71545e664a842b147bfc17e9ff391db3da"
+    },
+    {
+      "path": "sources/miracl/zh/official-docs-0.jsonl.gz",
+      "bytes": 97061486,
+      "sha256": "b036ba6a927a4598b314de55a1de200d2a619b28b4327f49e97ec4233d324827"
+    },
+    {
+      "path": "sources/miracl/zh/passages.jsonl.gz",
+      "bytes": 8657467,
+      "sha256": "d09a33559280fe5e7b4a6ce9330ff9e261906d1ef4bf991ea8c02d309657f9fa"
+    },
+    {
+      "path": "sources/miracl/zh/qrels-dev.tsv",
+      "bytes": 94140,
+      "sha256": "5546474d3dc8139014e6571e9f4041848bb0a314ca6d2d4bac708174d71c59eb"
+    },
+    {
+      "path": "sources/miracl/zh/topics-dev.tsv",
+      "bytes": 16903,
+      "sha256": "5b284a9aabf08bb2d1c88ed7ea276025c9d23846457c5350dc8d391b5e0d0a13"
+    },
+    {
+      "path": "sources/qasper/UPSTREAM_README.md",
+      "bytes": 9639,
+      "sha256": "da348d3f8277f8a93ca397941f6a525433e282858b1c0562aed3f667d8e55b05"
+    },
+    {
+      "path": "sources/qasper/qasper-test-and-evaluator-v0.3.tgz",
+      "bytes": 3865061,
+      "sha256": "72a52a41193e2838b8074f80ac074b94f956b84886c36a61c58a7df4171bdd72"
+    }
+  ]
+}

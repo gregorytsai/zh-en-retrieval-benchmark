@@ -130,5 +130,5 @@ urls=['index.html','models.html','methods.html','resources.html']+['models/'+k+'
 print('Built',len(urls),'pages')
 from build_english import build as build_english
 build_english(urls)
-from build_latest import build as build_latest
+from build_matrix import build as build_latest
 build_latest()

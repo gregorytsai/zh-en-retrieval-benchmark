@@ -1,0 +1,49 @@
+{
+  "collected_date": "2026-10-23",
+  "timezone": "Asia/Taipei",
+  "benchmark_started": false,
+  "files": [
+    {
+      "path": "sources/acord/original.zip",
+      "source": "https://huggingface.co/datasets/theatticusproject/acord/resolve/7ba1c6f2e0baaa32e78c78c2b02e9c57b102af4e/ACORD%20Dataset%20%26%20ReadMe.zip",
+      "revision": "7ba1c6f2e0baaa32e78c78c2b02e9c57b102af4e",
+      "license": "CC-BY-4.0",
+      "bytes": 3131196,
+      "sha256": "c9e851456a14aed161033b856e9f40f3cc9f46cf7282c2007b143420e93a65c3",
+      "verified_counts": {
+        "corpus": 3931,
+        "all_queries": 114,
+        "test_queries": 57,
+        "test_qrels": 61988
+      }
+    },
+    {
+      "path": "sources/acord/UPSTREAM_README.md",
+      "source": "https://huggingface.co/datasets/theatticusproject/acord/resolve/7ba1c6f2e0baaa32e78c78c2b02e9c57b102af4e/README.md",
+      "bytes": 4288,
+      "sha256": "3429ac789ecd25288b3a4935b20b99d1ba44996ee02b6ccbfcacf8c8d5f36271"
+    },
+    {
+      "path": "sources/medquad/official-judged-subset.zip",
+      "source": "https://raw.githubusercontent.com/abachaa/MedQuAD/577bd37b96c02d1833b2c9eed2de9f96964e96cb/QA-TestSet-LiveQA-Med-Qrels-2479-Answers.zip",
+      "revision": "577bd37b96c02d1833b2c9eed2de9f96964e96cb",
+      "license": "CC-BY-4.0 (author README and LICENSE)",
+      "bytes": 959640,
+      "sha256": "23d339357e5a10066542cc1e12f458f7002a8a86731369c8f4a8c4e337bf9ba1",
+      "ready_for_benchmark": false,
+      "pending": "Obtain and verify original LiveQA queries, their licensing, ID alignment and privacy; do not restore removed copyrighted answers."
+    },
+    {
+      "path": "sources/medquad/UPSTREAM_README.txt",
+      "source": "https://raw.githubusercontent.com/abachaa/MedQuAD/577bd37b96c02d1833b2c9eed2de9f96964e96cb/readme.txt",
+      "bytes": 3056,
+      "sha256": "e51e3ef59ec8aa923dd79f2b4132bb3cb1deccbf1b1aca59f3dd668e001397d8"
+    },
+    {
+      "path": "sources/medquad/LICENSE.txt",
+      "source": "https://raw.githubusercontent.com/abachaa/MedQuAD/577bd37b96c02d1833b2c9eed2de9f96964e96cb/LICENSE.txt",
+      "bytes": 16391,
+      "sha256": "5b63c5abb5f4218f79230730b3733ce681383e2d656044069b8c73cbdb8e7fb7"
+    }
+  ]
+}

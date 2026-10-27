@@ -1,0 +1,482 @@
+{
+  "scope": "full 7-embedder × 4-config × 6-dataset matrix",
+  "macro": "equal-weight mean nDCG@10 across all six datasets; incomplete configurations are excluded and block this file",
+  "configurations": [
+    {
+      "embedding": "qwen-4b",
+      "reranker": "qwen-reranker-4b",
+      "eligible": true,
+      "dataset_count_expected": 6,
+      "dataset_count_present": 6,
+      "macro_ndcg10_equal_weight": 0.7925829178606709,
+      "coverage": {
+        "acord-eng-eng": 57,
+        "eng-eng": 1148,
+        "eng-zho": 504,
+        "miracl-en-en": 200,
+        "miracl-zh-zh": 200,
+        "zho-zho": 504
+      },
+      "reasons": []
+    },
+    {
+      "embedding": "qwen-8b",
+      "reranker": "qwen-reranker-4b",
+      "eligible": true,
+      "dataset_count_expected": 6,
+      "dataset_count_present": 6,
+      "macro_ndcg10_equal_weight": 0.7917128599323339,
+      "coverage": {
+        "acord-eng-eng": 57,
+        "eng-eng": 1148,
+        "eng-zho": 504,
+        "miracl-en-en": 200,
+        "miracl-zh-zh": 200,
+        "zho-zho": 504
+      },
+      "reasons": []
+    },
+    {
+      "embedding": "bge-m3",
+      "reranker": "qwen-reranker-4b",
+      "eligible": true,
+      "dataset_count_expected": 6,
+      "dataset_count_present": 6,
+      "macro_ndcg10_equal_weight": 0.7907495993009631,
+      "coverage": {
+        "acord-eng-eng": 57,
+        "eng-eng": 1148,
+        "eng-zho": 504,
+        "miracl-en-en": 200,
+        "miracl-zh-zh": 200,
+        "zho-zho": 504
+      },
+      "reasons": []
+    },
+    {
+      "embedding": "f2llm-v2-0.6b",
+      "reranker": "qwen-reranker-4b",
+      "eligible": true,
+      "dataset_count_expected": 6,
+      "dataset_count_present": 6,
+      "macro_ndcg10_equal_weight": 0.7893842454304653,
+      "coverage": {
+        "acord-eng-eng": 57,
+        "eng-eng": 1148,
+        "eng-zho": 504,
+        "miracl-en-en": 200,
+        "miracl-zh-zh": 200,
+        "zho-zho": 504
+      },
+      "reasons": []
+    },
+    {
+      "embedding": "qwen-0.6b",
+      "reranker": "qwen-reranker-4b",
+      "eligible": true,
+      "dataset_count_expected": 6,
+      "dataset_count_present": 6,
+      "macro_ndcg10_equal_weight": 0.7892835362312159,
+      "coverage": {
+        "acord-eng-eng": 57,
+        "eng-eng": 1148,
+        "eng-zho": 504,
+        "miracl-en-en": 200,
+        "miracl-zh-zh": 200,
+        "zho-zho": 504
+      },
+      "reasons": []
+    },
+    {
+      "embedding": "embeddinggemma-2",
+      "reranker": "qwen-reranker-4b",
+      "eligible": true,
+      "dataset_count_expected": 6,
+      "dataset_count_present": 6,
+      "macro_ndcg10_equal_weight": 0.786897547047805,
+      "coverage": {
+        "acord-eng-eng": 57,
+        "eng-eng": 1148,
+        "eng-zho": 504,
+        "miracl-en-en": 200,
+        "miracl-zh-zh": 200,
+        "zho-zho": 504
+      },
+      "reasons": []
+    },
+    {
+      "embedding": "granite-97m-r2",
+      "reranker": "qwen-reranker-4b",
+      "eligible": true,
+      "dataset_count_expected": 6,
+      "dataset_count_present": 6,
+      "macro_ndcg10_equal_weight": 0.7748120027463551,
+      "coverage": {
+        "acord-eng-eng": 57,
+        "eng-eng": 1148,
+        "eng-zho": 504,
+        "miracl-en-en": 200,
+        "miracl-zh-zh": 200,
+        "zho-zho": 504
+      },
+      "reasons": []
+    },
+    {
+      "embedding": "qwen-4b",
+      "reranker": "qwen-reranker-0.6b",
+      "eligible": true,
+      "dataset_count_expected": 6,
+      "dataset_count_present": 6,
+      "macro_ndcg10_equal_weight": 0.7712709145714157,
+      "coverage": {
+        "acord-eng-eng": 57,
+        "eng-eng": 1148,
+        "eng-zho": 504,
+        "miracl-en-en": 200,
+        "miracl-zh-zh": 200,
+        "zho-zho": 504
+      },
+      "reasons": []
+    },
+    {
+      "embedding": "bge-m3",
+      "reranker": "qwen-reranker-0.6b",
+      "eligible": true,
+      "dataset_count_expected": 6,
+      "dataset_count_present": 6,
+      "macro_ndcg10_equal_weight": 0.7700306247229908,
+      "coverage": {
+        "acord-eng-eng": 57,
+        "eng-eng": 1148,
+        "eng-zho": 504,
+        "miracl-en-en": 200,
+        "miracl-zh-zh": 200,
+        "zho-zho": 504
+      },
+      "reasons": []
+    },
+    {
+      "embedding": "qwen-8b",
+      "reranker": "qwen-reranker-0.6b",
+      "eligible": true,
+      "dataset_count_expected": 6,
+      "dataset_count_present": 6,
+      "macro_ndcg10_equal_weight": 0.769026477249454,
+      "coverage": {
+        "acord-eng-eng": 57,
+        "eng-eng": 1148,
+        "eng-zho": 504,
+        "miracl-en-en": 200,
+        "miracl-zh-zh": 200,
+        "zho-zho": 504
+      },
+      "reasons": []
+    },
+    {
+      "embedding": "qwen-0.6b",
+      "reranker": "qwen-reranker-0.6b",
+      "eligible": true,
+      "dataset_count_expected": 6,
+      "dataset_count_present": 6,
+      "macro_ndcg10_equal_weight": 0.7689129417870064,
+      "coverage": {
+        "acord-eng-eng": 57,
+        "eng-eng": 1148,
+        "eng-zho": 504,
+        "miracl-en-en": 200,
+        "miracl-zh-zh": 200,
+        "zho-zho": 504
+      },
+      "reasons": []
+    },
+    {
+      "embedding": "f2llm-v2-0.6b",
+      "reranker": "qwen-reranker-0.6b",
+      "eligible": true,
+      "dataset_count_expected": 6,
+      "dataset_count_present": 6,
+      "macro_ndcg10_equal_weight": 0.7687376100585789,
+      "coverage": {
+        "acord-eng-eng": 57,
+        "eng-eng": 1148,
+        "eng-zho": 504,
+        "miracl-en-en": 200,
+        "miracl-zh-zh": 200,
+        "zho-zho": 504
+      },
+      "reasons": []
+    },
+    {
+      "embedding": "embeddinggemma-2",
+      "reranker": "qwen-reranker-0.6b",
+      "eligible": true,
+      "dataset_count_expected": 6,
+      "dataset_count_present": 6,
+      "macro_ndcg10_equal_weight": 0.76628623512705,
+      "coverage": {
+        "acord-eng-eng": 57,
+        "eng-eng": 1148,
+        "eng-zho": 504,
+        "miracl-en-en": 200,
+        "miracl-zh-zh": 200,
+        "zho-zho": 504
+      },
+      "reasons": []
+    },
+    {
+      "embedding": "qwen-4b",
+      "reranker": "bge-reranker",
+      "eligible": true,
+      "dataset_count_expected": 6,
+      "dataset_count_present": 6,
+      "macro_ndcg10_equal_weight": 0.7658409846352222,
+      "coverage": {
+        "acord-eng-eng": 57,
+        "eng-eng": 1148,
+        "eng-zho": 504,
+        "miracl-en-en": 200,
+        "miracl-zh-zh": 200,
+        "zho-zho": 504
+      },
+      "reasons": []
+    },
+    {
+      "embedding": "qwen-8b",
+      "reranker": "bge-reranker",
+      "eligible": true,
+      "dataset_count_expected": 6,
+      "dataset_count_present": 6,
+      "macro_ndcg10_equal_weight": 0.7624944653924369,
+      "coverage": {
+        "acord-eng-eng": 57,
+        "eng-eng": 1148,
+        "eng-zho": 504,
+        "miracl-en-en": 200,
+        "miracl-zh-zh": 200,
+        "zho-zho": 504
+      },
+      "reasons": []
+    },
+    {
+      "embedding": "f2llm-v2-0.6b",
+      "reranker": "bge-reranker",
+      "eligible": true,
+      "dataset_count_expected": 6,
+      "dataset_count_present": 6,
+      "macro_ndcg10_equal_weight": 0.7597802851386279,
+      "coverage": {
+        "acord-eng-eng": 57,
+        "eng-eng": 1148,
+        "eng-zho": 504,
+        "miracl-en-en": 200,
+        "miracl-zh-zh": 200,
+        "zho-zho": 504
+      },
+      "reasons": []
+    },
+    {
+      "embedding": "bge-m3",
+      "reranker": "bge-reranker",
+      "eligible": true,
+      "dataset_count_expected": 6,
+      "dataset_count_present": 6,
+      "macro_ndcg10_equal_weight": 0.7590984058814146,
+      "coverage": {
+        "acord-eng-eng": 57,
+        "eng-eng": 1148,
+        "eng-zho": 504,
+        "miracl-en-en": 200,
+        "miracl-zh-zh": 200,
+        "zho-zho": 504
+      },
+      "reasons": []
+    },
+    {
+      "embedding": "qwen-0.6b",
+      "reranker": "bge-reranker",
+      "eligible": true,
+      "dataset_count_expected": 6,
+      "dataset_count_present": 6,
+      "macro_ndcg10_equal_weight": 0.759027708529085,
+      "coverage": {
+        "acord-eng-eng": 57,
+        "eng-eng": 1148,
+        "eng-zho": 504,
+        "miracl-en-en": 200,
+        "miracl-zh-zh": 200,
+        "zho-zho": 504
+      },
+      "reasons": []
+    },
+    {
+      "embedding": "granite-97m-r2",
+      "reranker": "qwen-reranker-0.6b",
+      "eligible": true,
+      "dataset_count_expected": 6,
+      "dataset_count_present": 6,
+      "macro_ndcg10_equal_weight": 0.7574406069046894,
+      "coverage": {
+        "acord-eng-eng": 57,
+        "eng-eng": 1148,
+        "eng-zho": 504,
+        "miracl-en-en": 200,
+        "miracl-zh-zh": 200,
+        "zho-zho": 504
+      },
+      "reasons": []
+    },
+    {
+      "embedding": "embeddinggemma-2",
+      "reranker": "bge-reranker",
+      "eligible": true,
+      "dataset_count_expected": 6,
+      "dataset_count_present": 6,
+      "macro_ndcg10_equal_weight": 0.7555100992061595,
+      "coverage": {
+        "acord-eng-eng": 57,
+        "eng-eng": 1148,
+        "eng-zho": 504,
+        "miracl-en-en": 200,
+        "miracl-zh-zh": 200,
+        "zho-zho": 504
+      },
+      "reasons": []
+    },
+    {
+      "embedding": "granite-97m-r2",
+      "reranker": "bge-reranker",
+      "eligible": true,
+      "dataset_count_expected": 6,
+      "dataset_count_present": 6,
+      "macro_ndcg10_equal_weight": 0.7493765126723134,
+      "coverage": {
+        "acord-eng-eng": 57,
+        "eng-eng": 1148,
+        "eng-zho": 504,
+        "miracl-en-en": 200,
+        "miracl-zh-zh": 200,
+        "zho-zho": 504
+      },
+      "reasons": []
+    },
+    {
+      "embedding": "qwen-8b",
+      "reranker": "standalone",
+      "eligible": true,
+      "dataset_count_expected": 6,
+      "dataset_count_present": 6,
+      "macro_ndcg10_equal_weight": 0.7439469499061103,
+      "coverage": {
+        "acord-eng-eng": 57,
+        "eng-eng": 1148,
+        "eng-zho": 504,
+        "miracl-en-en": 200,
+        "miracl-zh-zh": 200,
+        "zho-zho": 504
+      },
+      "reasons": []
+    },
+    {
+      "embedding": "qwen-4b",
+      "reranker": "standalone",
+      "eligible": true,
+      "dataset_count_expected": 6,
+      "dataset_count_present": 6,
+      "macro_ndcg10_equal_weight": 0.7353499307827773,
+      "coverage": {
+        "acord-eng-eng": 57,
+        "eng-eng": 1148,
+        "eng-zho": 504,
+        "miracl-en-en": 200,
+        "miracl-zh-zh": 200,
+        "zho-zho": 504
+      },
+      "reasons": []
+    },
+    {
+      "embedding": "bge-m3",
+      "reranker": "standalone",
+      "eligible": true,
+      "dataset_count_expected": 6,
+      "dataset_count_present": 6,
+      "macro_ndcg10_equal_weight": 0.7129083912049503,
+      "coverage": {
+        "acord-eng-eng": 57,
+        "eng-eng": 1148,
+        "eng-zho": 504,
+        "miracl-en-en": 200,
+        "miracl-zh-zh": 200,
+        "zho-zho": 504
+      },
+      "reasons": []
+    },
+    {
+      "embedding": "qwen-0.6b",
+      "reranker": "standalone",
+      "eligible": true,
+      "dataset_count_expected": 6,
+      "dataset_count_present": 6,
+      "macro_ndcg10_equal_weight": 0.7008996621799422,
+      "coverage": {
+        "acord-eng-eng": 57,
+        "eng-eng": 1148,
+        "eng-zho": 504,
+        "miracl-en-en": 200,
+        "miracl-zh-zh": 200,
+        "zho-zho": 504
+      },
+      "reasons": []
+    },
+    {
+      "embedding": "embeddinggemma-2",
+      "reranker": "standalone",
+      "eligible": true,
+      "dataset_count_expected": 6,
+      "dataset_count_present": 6,
+      "macro_ndcg10_equal_weight": 0.6929973854959255,
+      "coverage": {
+        "acord-eng-eng": 57,
+        "eng-eng": 1148,
+        "eng-zho": 504,
+        "miracl-en-en": 200,
+        "miracl-zh-zh": 200,
+        "zho-zho": 504
+      },
+      "reasons": []
+    },
+    {
+      "embedding": "f2llm-v2-0.6b",
+      "reranker": "standalone",
+      "eligible": true,
+      "dataset_count_expected": 6,
+      "dataset_count_present": 6,
+      "macro_ndcg10_equal_weight": 0.6911146019036093,
+      "coverage": {
+        "acord-eng-eng": 57,
+        "eng-eng": 1148,
+        "eng-zho": 504,
+        "miracl-en-en": 200,
+        "miracl-zh-zh": 200,
+        "zho-zho": 504
+      },
+      "reasons": []
+    },
+    {
+      "embedding": "granite-97m-r2",
+      "reranker": "standalone",
+      "eligible": true,
+      "dataset_count_expected": 6,
+      "dataset_count_present": 6,
+      "macro_ndcg10_equal_weight": 0.6418821534376716,
+      "coverage": {
+        "acord-eng-eng": 57,
+        "eng-eng": 1148,
+        "eng-zho": 504,
+        "miracl-en-en": 200,
+        "miracl-zh-zh": 200,
+        "zho-zho": 504
+      },
+      "reasons": []
+    }
+  ]
+}

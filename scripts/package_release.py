@@ -23,6 +23,15 @@ for filename in ['phase2-batch1-results.zip','phase2-batch2-results.zip','phase2
   for n,data in entries.items():
    info=zipfile.ZipInfo(n,(2026,10,24,0,0,0));info.compress_type=zipfile.ZIP_DEFLATED;z.writestr(info,data)
  path.write_bytes(out.getvalue())
+publication_path=ROOT/'research/matrix/PUBLICATION_MANIFEST.json'
+publication=json.loads(publication_path.read_text('utf-8'))
+for relative,metadata in publication.items():
+ metadata['published_sha256']=hashlib.sha256((ROOT/'research/matrix/workspace/embedding-study-phase2-20261023'/relative).read_bytes()).hexdigest()
+publication_path.write_bytes((json.dumps(publication,ensure_ascii=False,indent=2)+'\n').encode('utf-8'))
+with zipfile.ZipFile(ROOT/'downloads/matrix-code.zip','w',zipfile.ZIP_DEFLATED,compresslevel=9) as z:
+ for p in sorted((ROOT/'research/matrix').rglob('*')):
+  if p.is_file() and '__pycache__' not in p.parts:z.write(p,p.relative_to(ROOT))
+ for name in ['scripts/verify_matrix.py','data/matrix/analysis.json','data/matrix/provenance.json','research/phase2/LICENSES/Apache-2.0.txt','LICENSE']:z.write(ROOT/name,name)
 hashes={str(p.relative_to(ROOT)).replace('\\','/'):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(ROOT.rglob('*')) if p.is_file() and '.git' not in p.parts and '__pycache__' not in p.parts and p.name!='SHA256SUMS.json'}
 (ROOT/'data/SHA256SUMS.json').write_bytes((json.dumps(hashes,indent=2)+'\n').encode('utf-8'))
 print('Packaged code and hashed',len(hashes),'files')

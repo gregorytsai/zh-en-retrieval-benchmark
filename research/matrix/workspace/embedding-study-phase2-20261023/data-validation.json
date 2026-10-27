@@ -1,0 +1,107 @@
+{
+  "datasets_sha256": "bc0657a77090f86b081b378e3f369653dc08f6049da78487b7dc0c134e7adad1",
+  "source_files": [
+    {
+      "path": "[local path omitted]",
+      "sha256": "9148cef1a28fdd97a962c388f186aa2111a52c218267c6e79629cb5edfdccf76",
+      "bytes": 277261
+    },
+    {
+      "path": "[local path omitted]",
+      "sha256": "c835acc0b951e76322777e5af0e063bae42bd10769229ca25a31369086d45a0d",
+      "bytes": 21607
+    },
+    {
+      "path": "[local path omitted]",
+      "sha256": "9dac3703555d43ef67e58d209467ec491e8ad254b2ef849c0f01ed99ded9a0fc",
+      "bytes": 6203
+    },
+    {
+      "path": "[local path omitted]",
+      "sha256": "5ed1dff1dee20801e947d9f1d10ab09061483d3c56a7d0f796fdea7b29fd9d53",
+      "bytes": 218074
+    },
+    {
+      "path": "[local path omitted]",
+      "sha256": "74e0a356e0a47fa9fa6f4e2a2e4623c7dfa750643f993863234609960f985947",
+      "bytes": 21624
+    },
+    {
+      "path": "[local path omitted]",
+      "sha256": "c26863da13098e02a72580c9319342277e115a8a576cffa78c5cf7a33cfe1954",
+      "bytes": 6201
+    },
+    {
+      "path": "[local path omitted]",
+      "sha256": "2a9ffa08127f13ebe3d948d90a6fd4b2f188aee0d3289cc06665fba73f9cb29f",
+      "bytes": 592947
+    },
+    {
+      "path": "[local path omitted]",
+      "sha256": "08da7092232bfe5c625f78082b2af29d78ecde633abde1a810b0b0c363e49559",
+      "bytes": 48120
+    },
+    {
+      "path": "[local path omitted]",
+      "sha256": "ef783780d9e296caa5c3aa3fafb328dd25e823f8e43a397b057f66a18b47b86f",
+      "bytes": 13424
+    },
+    {
+      "path": "[local path omitted]",
+      "sha256": "c9e851456a14aed161033b856e9f40f3cc9f46cf7282c2007b143420e93a65c3",
+      "bytes": 3131196
+    }
+  ],
+  "datasets": {
+    "eng-zho": {
+      "corpus": 430,
+      "queries": 504,
+      "qrels": 504,
+      "grade_mode": "binary",
+      "max_document_chars": 4993,
+      "pilot_query_ids": [
+        "Q13",
+        "Q460",
+        "Q334"
+      ]
+    },
+    "zho-zho": {
+      "corpus": 443,
+      "queries": 504,
+      "qrels": 504,
+      "grade_mode": "binary",
+      "max_document_chars": 1399,
+      "pilot_query_ids": [
+        "Q146",
+        "Q468",
+        "Q57"
+      ]
+    },
+    "eng-eng": {
+      "corpus": 978,
+      "queries": 1148,
+      "qrels": 1148,
+      "grade_mode": "binary",
+      "max_document_chars": 4993,
+      "pilot_query_ids": [
+        "Q600",
+        "Q121",
+        "Q957"
+      ]
+    },
+    "acord-eng-eng": {
+      "corpus": 3931,
+      "queries": 57,
+      "qrels": 61988,
+      "grade_mode": "graded",
+      "max_document_chars": 15308,
+      "pilot_query_ids": [
+        "Audit Rights",
+        "fraud and/or gross negligence indemnity",
+        "indirect damage waiver clauses that exclude third party IP infringement and fraud, gross negligence or willful misconduct"
+      ]
+    }
+  },
+  "expected_summaries": 24,
+  "expected_rows": 13278
+}

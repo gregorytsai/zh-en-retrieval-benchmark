@@ -1,29 +1,34 @@
 # Bilingual Retrieval Lab / 中英檢索實驗室
 
-**Updated 24 October 2026.** [繁體中文](https://gregorytsai.github.io/zh-en-retrieval-benchmark/) · [English](https://gregorytsai.github.io/zh-en-retrieval-benchmark/en/)
+**Updated 27 October 2026; measurements completed 26 October.** [繁體中文](https://gregorytsai.github.io/zh-en-retrieval-benchmark/) · [English](https://gregorytsai.github.io/zh-en-retrieval-benchmark/en/)
 
-Latest accepted runs: 14,478 measurements, 30 dataset/setup groups, 2,613 dataset-qualified queries. MLQA full validation in three directions, ACORD test, and two MIRACL judged-passage subsets. This evaluates retrieval ranking, not translation or generated-answer quality.
+Complete matrix: **7 embedders × 4 retrieval/reranking settings × 6 conditions = 28 complete setups, 168 summaries, 73,164 accepted query measurements**. The same 2,613 dataset-qualified queries are repeated across setups, not independent subjects. All setups use identical input corpora and query selections; each embedder supplies the same ordered Top50 candidates to its three rerankers.
 
-| Six-condition equal-weight average | Top-1 | nDCG@10 |
-|---|---:|---:|
-| Qwen3 Embedding 4B alone | 65.35% | 0.73535 |
-| + Qwen3 Reranker 0.6B | 71.37% | 0.77127 |
-| + Qwen3 Reranker 4B | 74.01% | 0.79258 |
+| Six-condition equal-weight average | Top-1 | nDCG@10 | Q8_0 weights |
+|---|---:|---:|---:|
+| Qwen 4B + Qwen 4B reranker | 74.01% | 0.7926 | 7.972 GiB |
+| Qwen 8B + Qwen 4B reranker | 74.10% | 0.7917 | 11.480 GiB |
+| BGE-M3 + Qwen 4B reranker | 74.05% | 0.7907 | 4.577 GiB |
+| Qwen 0.6B + Qwen 4B reranker | 74.09% | 0.7893 | 4.581 GiB |
+| BGE-M3 + Qwen 0.6B reranker | 71.69% | 0.7700 | 1.186 GiB |
 
-Only three setups were tested in all six conditions. Each condition has weight 1/6 (MLQA family 50%, MIRACL 33.33%, ACORD 16.67%). The interactive site also offers MLQA three-direction averages and each individual condition, metric switching, reranker filtering, sortable tables and model pages. No missing setup is imputed. Historical 22-setup results remain under [baseline.html](https://gregorytsai.github.io/zh-en-retrieval-benchmark/baseline.html).
+Each condition weighs 1/6: MLQA contributes 50%, MIRACL 33.33%, ACORD 16.67%. Top-1 and nDCG leaders differ. Small score differences are descriptive point estimates, not significant wins: no global 28-setup bootstrap intervals or multiplicity corrections were computed. This measures retrieval ranking, not translation or generated-answer quality.
 
-Important limits: ACORD Top-1 uses grade≥1 (2+ stars), nDCG uses exponential gain, and P@5 uses a fixed denominator; these differ from the original ACORD paper. MIRACL uses a small union of dev judged passages, not the official full corpus. Qwen's published measurements support a larger-reranker quality trend, but scores from different protocols are not directly comparable. Our local observations concern task-specific quality/latency tradeoffs, not first-ever findings.
+The complete matrix makes small-embedder/large-reranker tradeoffs visible. Larger rerankers give higher six-task mean nDCG for all seven embedders, consistent in direction with [Qwen's published evaluation](https://qwenlm.github.io/blog/qwen3-embedding/), but Qwen's Top100 protocol differs. Local results are not first-ever findings. Pooled median reranking stage time is 0.849 s for BGE, 1.127 s for Qwen 0.6B, and 6.217 s for Qwen 4B on the measured M3 Ultra. File size is not a minimum RAM/VRAM requirement.
+
+MIRACL uses a small dev-judged passage union, not the full corpus; near-saturated candidate recall limits embedder discrimination. ACORD has 57 queries; Top-1 uses 2+ stars, nDCG exponential gain and P@5 a fixed denominator, unlike the original paper. Known source-report erratum: standalone Top100 is stale prose; all actual matrix rankings contain Top50.
 
 ## Inspect and reproduce
 
-- [Methods and source comparison](https://gregorytsai.github.io/zh-en-retrieval-benchmark/en/latest-methods.html)
-- [Latest CSV](data/phase2/summary.csv), [analysis](data/phase2/analysis.json), [independent audit](data/phase2/independent-audit.json)
-- [Batch 1 complete results](downloads/phase2-batch1-results.zip), [Batch 2 complete results](downloads/phase2-batch2-results.zip)
-- [Runner source](research/phase2/README.md), [code ZIP](downloads/phase2-code.zip), [materials](downloads/phase2-materials.zip)
-- [Official-source research](data/phase2/web-comparison.json), [release hashes](data/SHA256SUMS.json)
+- [Methods, limitations and all downloads](https://gregorytsai.github.io/zh-en-retrieval-benchmark/en/latest-methods.html)
+- [168-row summary CSV](data/matrix/summary.csv), [analysis JSON](data/matrix/analysis.json), [independent audit](data/matrix/independent-audit.json)
+- Seven complete result archives in `downloads/matrix-B01-results.zip` through `matrix-B07-results.zip`; [shared queries/qrels](downloads/matrix-shared.zip)
+- [Reproduction guide](research/matrix/README.md), [complete matrix code](downloads/matrix-code.zip), [frozen materials](downloads/phase2-materials.zip)
+- [Publication provenance](data/matrix/provenance.json), [source changes/hashes](research/matrix/PUBLICATION_MANIFEST.json), [all release hashes](data/SHA256SUMS.json)
+- Historical [Oct 24 phase 2](https://gregorytsai.github.io/zh-en-retrieval-benchmark/en/phase2.html) and [Oct 22 baseline](https://gregorytsai.github.io/zh-en-retrieval-benchmark/en/baseline.html)
 
-With Python and NumPy, run `python scripts/verify_phase2.py` for the new measurements and `python scripts/verify_release.py` for the original measurements plus release hashes and links. These are offline arithmetic/integrity checks, not model inference. Build both languages with `python scripts/build_site.py`, then refresh archives/hashes with `python scripts/package_release.py`.
+Run `python scripts/verify_matrix.py` (standard library only) for the latest raw scores and website calculations. The check passed for all 73,164 rows and 957,516 quality values. This is offline arithmetic/integrity verification, not new model inference. `verify_phase2.py` checks the preceding release; `verify_release.py` checks the original baseline plus all release hashes and HTML links. Build with `python scripts/build_site.py`, package with `python scripts/package_release.py`.
 
-MLQA materials retain CC BY-SA 3.0; ACORD retains CC BY 4.0; MIRACL topics/qrels retain Apache 2.0. MIRACL passage text is retrieved from pinned upstream sources using the supplied helper, preserving Wikipedia attribution/terms, rather than rehosted here. Code: MIT. Model weights are not included. See the materials NOTICE and reproduction guide for revisions, hashes and transformations.
+MLQA retains CC BY-SA 3.0; ACORD CC BY 4.0; MIRACL topics/qrels Apache 2.0. MIRACL passage text is reconstructed from pinned upstream sources with attribution, not rehosted here. Research code: MIT. Weights and private GPU/traffic logs are not included.
 
 聯絡 / Contact: [gregorytsai@gmail.com](mailto:gregorytsai@gmail.com)

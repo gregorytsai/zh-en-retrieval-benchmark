@@ -1,0 +1,27 @@
+{
+  "datasets": {
+    "miracl-zh-zh": {
+      "queries": 200,
+      "corpus": 3786,
+      "qrels": 1998,
+      "max_doc_chars": 4474
+    },
+    "miracl-en-en": {
+      "queries": 200,
+      "corpus": 7921,
+      "qrels": 2091,
+      "max_doc_chars": 5873
+    }
+  },
+  "expected_rows": 1200,
+  "expected_summaries": 6,
+  "status": "draft_not_ready_for_inference",
+  "excluded_by_user": [
+    "QASPER"
+  ],
+  "pending": [
+    "length audit",
+    "second-batch runner and guarded pilot"
+  ],
+  "datasets_sha256": "fdf802cc03e9059783e5a2cba0785437253f07841ec6956246d5884461e7ba3d"
+}

@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "status": "v4_frozen_before_resume",
+  "frozen_at": "2026-10-24T22:14:05+08:00",
+  "runner_root": "full-matrix-runner-continuation-v4",
+  "benchmark_started_at_freeze": false,
+  "parent_source_preserved": "full-matrix-runner-continuation-v3",
+  "parent_output_preserved": "run-full-matrix-continuation-v3",
+  "runtime_sha256": {
+    "batch_progress.py": "c27cdb8e27bccf64979be615d787dd7a0f15d4e2ab21256723fc12dedcce9a3a",
+    "core.py": "9c58d309c35a7a7e5879c57bdbc34d30b845a56143f90cacdf368222f03d1f4d",
+    "guarded_engine.py": "c115efeafc9e5b894067a4967d462648841985ac4e3ba995395161593e0c9b1c",
+    "matrix_spec.py": "5ea7b36b3d262566d91356eadc2ce7ddfae0b43e68cc037a56e67508b1e9cb01",
+    "pilot_forecast.py": "5d27d7cb1581302487756766101190cd471948b5ce6336ede3dec8bd7b0f4f56",
+    "prepare_v4_continuation.py": "bc64373156ac50c621eb8dfc633866f05b0e1836e45ef138e3faaa66ec72d9eb",
+    "run_full_matrix.py": "081c0e190fd982dac91ec927bbe9abdbf7789bb7ba5e592ec54fe3688cb825e7",
+    "run_sequence.py": "d165341a92e5b63ace422d1dfc42ac787633e1e261bb327a830ecb253ecff9c8",
+    "server_helper.py": "e0e12865c13c819b9ed14e377791d871e43f7505b328df61bfe848b8cc512769",
+    "traffic_guard.py": "83014923ccf9db2ae2e97878a457e85a8556ecbdda5ab34fe9a541738fa73dcd"
+  },
+  "test_sha256": {
+    "test_batch_progress.py": "fa056e40660e252ab9b1562ca687c70aba2194bba7caad36f35aa62286673852",
+    "test_cli_and_forecast.py": "d108b9a95d9ddf8f4019c97f24fe8c7c20e1c66ad34e554f53c731134bb71015",
+    "test_continuation_import.py": "ac5448545e5f130f7b07de4b1cc9eb512d0b9c146777c7f6be4d92fd581cf071",
+    "test_engine.py": "5de6c966220a43270b1f0a71c4cf7e85cbc13523101b2aa5c39b18b83953ec33",
+    "test_engine_orchestration.py": "9a2586b9c447fff012f08c6858efe4aadba12744322fabe8b17b999d5d7eab77",
+    "test_live_guard.py": "327bd9759d3f3f7d1688dbf2d8b09cd2a7a2c939e43dd7f9c23fc6cb966299fd",
+    "test_matrix_spec.py": "ede3fd6ce214cbbcf8e6bbda5b2f198390e80492f7be01f9b9f63eeaa1f1681b",
+    "test_real_b02_split_integration.py": "7bec4f4493c514bd03bae22e6b329b60f22418a4767e3b4303e27f7703f141ba",
+    "test_sequence.py": "eb12bbe1db159a8eb26ed342cfbaf27608c130dd1a146788157bbbb0382c9713"
+  },
+  "offline_validation": {
+    "python_runtime": "[local path omitted]",
+    "py_compile_passed": true,
+    "unit_and_integration_tests": 56,
+    "tests_passed": true,
+    "real_b02_split_integration": {
+      "status": "passed",
+      "input": "preserved v3 B02-A/B official artifacts",
+      "output": "temporary directory only",
+      "summaries": 24,
+      "rows": 10452,
+      "ranking_configurations": 4,
+      "v3_combined_source_hashes_unchanged": true
+    },
+    "live_processes_at_freeze": {
+      "v3_controller_runner_owned_server": "none",
+      "production_router_pid": 82337,
+      "production_router_and_workers": "visible and left untouched"
+    }
+  },
+  "repair": [
+    "B02 combined ranking records now include the reranker identity required by ranking serialization.",
+    "B02 combined audit checks only the progress table, not same-named scope-table rows.",
+    "Plan progress updater no longer treats pilot audit wording as official completion."
+  ],
+  "carryover": {
+    "official_only": true,
+    "B01": {
+      "summaries": 24,
+      "rows": 10452
+    },
+    "B02-A": {
+      "summaries": 4,
+      "rows": 4592
+    },
+    "B02-B": {
+      "summaries": 20,
+      "rows": 5860
+    },
+    "B02_combined": {
+      "summaries": 24,
+      "rows": 10452
+    },
+    "total_reused": {
+      "summaries": 48,
+      "rows": 20904
+    },
+    "pilot_rows_included": false,
+    "v3_partial_attempts_included": false,
+    "strict_reaudit_script": "full-matrix-runner-continuation-v4/prepare_v4_continuation.py"
+  },
+  "execution_policy": {
+    "next_batch": "B03",
+    "schedule_after_carryover": [
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07"
+    ],
+    "pilot_hours": 2,
+    "official_segment_hours": 12,
+    "forecast_role": "planning-only; does not block authorized continuation",
+    "guard": "unchanged fail-closed; 1-second external metrics sampling and rolling 30-second quiet window",
+    "source_changes_after_freeze": "forbidden; any fix requires a new versioned source/output"
+  }
+}
