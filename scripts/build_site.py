@@ -132,3 +132,5 @@ from build_english import build as build_english
 build_english(urls)
 from build_matrix import build as build_latest
 build_latest()
+from build_current import build as build_current
+build_current()

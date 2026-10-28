@@ -30,14 +30,20 @@ def verify():
   rs=groups[s['embedding']];assert len(rs)==57
   for field in ['ndcg10','top1','mrr10','recall50','p5_stars3','p5_stars4','p5_stars5']:close(s[field],statistics.mean(r[field] for r in rs if r[field] is not None))
   assert all(s[f] is None for f in ['total_ms_mean','total_ms_p50','total_ms_p95'])
- a=read('data/matrix/analysis.json');current=read('data/matrix/current-comparison.json');assert len(current['scopes']['acord-eng-eng'])==7
- for scope,rs in current['scopes'].items():
-  if scope=='acord-eng-eng':assert rs==corrected['rows'];continue
-  assert len(rs)==28
-  for r in rs:
-   selected=[s for s in a['rows'] if s['embedding']==r['embedding'] and s['reranker']==r['reranker'] and (s['dataset']!='acord-eng-eng' if scope=='all' else s['dataset'] in ['eng-zho','zho-zho','eng-eng'] if scope=='mlqa' else s['dataset']==scope)]
-   assert len(selected)==(5 if scope=='all' else 3 if scope=='mlqa' else 1)
-   for f in ['ndcg10','top1','mrr10','recall50','total_ms_mean']:close(r[f],statistics.mean(s[f] for s in selected))
+ current=read('data/matrix/current-comparison.json')
+ is_retest=current['version']=='2026-10-28-acord-retest'
+ if is_retest:
+  from verify_current import verify as verify_current
+  verify_current()
+ else:
+  a=read('data/matrix/analysis.json');current=read('data/matrix/current-comparison.json')
+  for scope,rs in current['scopes'].items():
+   if scope=='acord-eng-eng':assert rs==corrected['rows'];continue
+   assert len(rs)==28
+   for r in rs:
+    selected=[s for s in a['rows'] if s['embedding']==r['embedding'] and s['reranker']==r['reranker'] and (s['dataset']!='acord-eng-eng' if scope=='all' else s['dataset'] in ['eng-zho','zho-zho','eng-eng'] if scope=='mlqa' else s['dataset']==scope)]
+    assert len(selected)==(5 if scope=='all' else 3 if scope=='mlqa' else 1)
+    for f in ['ndcg10','top1','mrr10','recall50','total_ms_mean']:close(r[f],statistics.mean(s[f] for s in selected))
  count=0;diaggroups=collections.defaultdict(list)
  for i in range(1,8):
   with zipfile.ZipFile(R/f'downloads/matrix-B{i:02}-results.zip') as z:
@@ -58,7 +64,7 @@ def verify():
   assert 'role="meter"' in s and 'aria-valuemax="1"' in s
   for p in (R/(lang+'models')).glob('*.html'):
    txt=p.read_text('utf-8');assert ('acord.html' in txt) and ('ACORD' in txt)
- with (R/'data/matrix/current-summary.csv').open(encoding='utf-8-sig') as f:assert len(list(csv.DictReader(f)))==147
+ with (R/'data/matrix/current-summary.csv').open(encoding='utf-8-sig') as f:assert len(list(csv.DictReader(f)))==(168 if is_retest else 147)
  assert count==73164
  return {'status':'passed','corrected_rankings':399,'corrected_models':7,'five_task_configurations':28,'timing_sums_verified':count,'diagnostic_configurations':28,'bilingual_payloads_verified':2,'new_inference':False}
 if __name__=='__main__':print(json.dumps(verify(),indent=2))

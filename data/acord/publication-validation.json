@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "protocol_id": "judged-top50-v1",
+  "run_id": "acord-aggregate-20261027T130905Z",
+  "source_run_ids": [
+    "acord-official-a01-20261027-185413-353251f3",
+    "acord-official-a02-20261027-193339-383841a1",
+    "acord-official-a03-20261027-200241-8760934f",
+    "acord-official-a04-20261027-201158-d16309fc",
+    "acord-official-a05-20261027-202140-90a0801f",
+    "acord-official-a06-20261027-203407-e315f81e",
+    "acord-official-a07-20261027-204444-b3d808a1"
+  ],
+  "counts": {
+    "configurations": 28,
+    "quality_rows": 1596,
+    "standalone_rows": 399,
+    "reranker_rows": 1197,
+    "candidate_lists": 399,
+    "pair_scores": 59850,
+    "full_rankings": 399,
+    "verified_fresh_inference_requests": 2793,
+    "verified_fresh_retrievals": 1596,
+    "missing": 0,
+    "duplicate": 0,
+    "error": 0,
+    "truncation": 0,
+    "nonfinite": 0,
+    "hash_mismatch": 0
+  },
+  "independent_metrics": true,
+  "quantile_algorithm": "Hyndman-Fan type 7 / linear",
+  "execution_attestation": "Required separately: frozen model/code/config hashes, source/cache regression, smoke/token/GPU/guard evidence, accepted commit pointers and inference request traces.",
+  "public_package_files": 103,
+  "public_package_hashes_verified": 102,
+  "model_pins_match_previous": 10,
+  "frozen_queries_corpus_qrels_match": true,
+  "windows_tests": {
+    "passed": 87,
+    "module_import_errors": 7,
+    "reason": "Unix fcntl is unavailable on Windows; source archive reports 107 passes on macOS. No inference rerun in publication check."
+  },
+  "full_judged_tail_caveat": "Source reports 69 historical judged-tail order differences, all beyond Top50; 4 exceed the diagnostic epsilon. Cause unconfirmed; this release does not attribute them to floating-point noise."
+}

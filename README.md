@@ -2,45 +2,39 @@
 
 [繁體中文](https://gregorytsai.github.io/zh-en-retrieval-benchmark/) · [English](https://gregorytsai.github.io/zh-en-retrieval-benchmark/en/)
 
-**27 October 2026 correction.** Compare 28 Embedder × Reranker setups on the same five conditions: three MLQA directions and two MIRACL language subsets, each weighted 1/5. ACORD is reported separately with seven corrected standalone results. Corrected ACORD reranker results await measurement.
+**28 October 2026 update:** ACORD now has 28 complete retested setups. The homepage shows six equal-weight task means, retaining the original-five and individual-task views. Six-task score = (original-five mean × 5 + ACORD) / 6. MLQA contributes 50%, MIRACL 33.3%, legal 16.7%; these weights are not production traffic.
 
-| Five-task equal-weight mean | nDCG@10 | Top-1 | Q8_0 weights |
-|---|---:|---:|---:|
-| Qwen 8B + Qwen 4B reranker | 0.919 | 85.42% | 11.480 GiB |
-| Qwen 4B + Qwen 4B reranker | 0.918 | 85.30% | 7.972 GiB |
-| Qwen 4B + Qwen 0.6B reranker | 0.897 | 81.79% | 4.581 GiB |
-| BGE-M3 + Qwen 0.6B reranker | 0.896 | 81.82% | 1.186 GiB |
-| Qwen 0.6B + Qwen 0.6B reranker | 0.894 | 81.57% | 1.191 GiB |
-| Qwen 8B alone | 0.867 | 77.24% | 7.494 GiB |
+| Setup | Six-task nDCG | Original five | ACORD | Q8_0 weights |
+|---|---:|---:|---:|---:|
+| Qwen 8B + Qwen 4B reranker | 0.887 | 0.919 | 0.726 | 11.480 GiB |
+| Qwen 4B + Qwen 4B reranker | 0.886 | 0.918 | 0.728 | 7.972 GiB |
+| Qwen 4B + Qwen 0.6B reranker | 0.862 | 0.897 | 0.684 | 4.581 GiB |
+| BGE-M3 + Qwen 0.6B reranker | 0.860 | 0.896 | 0.682 | 1.186 GiB |
 
-A small embedder with a small reranker exceeds a large embedder alone on this dataset, with a latency tradeoff: Qwen 0.6B + 0.6B averages about 1.08 s per query, versus about 52 ms for Qwen 8B alone. File size is not measured RAM/VRAM. This is local Q8_0 / Metal performance on M3 Ultra, 256 GiB.
+Current evidence comprises 71,568 original five-task rows plus 1,596 fresh ACORD rows. The 2,613 dataset-qualified queries recur across 28 setups, not 73,164 independent subjects. Original archives remain unchanged, including superseded ACORD scores.
 
-Chinese-to-English retrieval is a focus: Qwen 0.6B + 0.6B reaches 86.31% Top-1, versus 81.94% for Qwen 8B alone; Qwen 8B + 4B reaches 92.26%. The source key `eng-zho` means English context / Chinese question. English-to-Chinese was not tested. Retrieval scores are not translation or generated-answer accuracy.
+## What the legal retest changes
 
-## ACORD correction
+ACORD judged-top50-v1 removes unknown qrel pairs before selecting 50 candidates, retaining explicit zero grades. Three rerankers share each embedder's ordered candidates. Linear nDCG uses full-qrels ideal rankings; binary relevance requires original stars >=3. Normalized star P@5 divides by min(5, qualifying clauses), excluding queries with none; 5-star has 29 eligible queries.
 
-The previous code assigned unjudged pairs zero gain and retained their rank positions. ACORD explicitly requires ignoring unjudged pairs (paper C.5). It also uses linear nDCG gain; our old code used exponential gain. Earlier arithmetic checks missed this protocol mismatch.
+Production RAG lacks judged-membership information. The aggregate is a controlled benchmark index, not a production hit rate, answer accuracy or full reproduction of the paper's pipeline. Latency is not pooled across all six tasks.
 
-Seven original vector caches passed their stored hashes. Reconstructed full rankings reproduce all 399 original Top50 lists exactly. Corrected evaluation ignores unjudged pairs before cutoffs, uses linear nDCG and requires original stars >=3 for binary metrics. Corrected nDCG@10 ranges from 0.5169 to 0.7027. Star P@5 uses the paper's normalized denominator and excludes queries without qualifying clauses for that metric. Corrected latency is not remeasured and is blank.
-
-Rerankers scored only the old Top50 pool. Filtering that pool is a truncated diagnostic, not a complete corrected run. New candidate scoring is required. Old six-task means and ACORD scores remain historical evidence, not current recommendations.
-
-[ACORD results and research context](https://gregorytsai.github.io/zh-en-retrieval-benchmark/en/acord.html) explains why high-quality legal clauses remain challenging without claiming all published legal scores are poor.
+Reranking can hurt: Qwen 4B alone scores 0.703 on ACORD versus 0.684 with Qwen 0.6B reranking and 0.675 with BGE. F2LLM 0.6B + Qwen 4B has the highest estimate at 0.729; nearby scores do not establish a reliable winner. With the same Qwen 0.6B reranker, Qwen 4B and BGE-M3 achieve candidate recall of 95.26% versus 85.30%, but identical Top-1 on all 57 queries. [Paired analysis](https://gregorytsai.github.io/zh-en-retrieval-benchmark/pair-comparison.html).
 
 ## Inspect and reproduce
 
-- [Qwen 4B vs BGE-M3 with the same Qwen 0.6B reranker](https://gregorytsai.github.io/zh-en-retrieval-benchmark/en/pair-comparison.html): all 2,556 paired queries, task-level gains and losses, and exploratory passage-cluster bootstrap intervals. Qwen gains five net first-result hits on 1,148 English queries, but has no Chinese Top-1 advantage. The additional 3.395 GiB of weights is a conditional upgrade, not a universal recommendation. Recompute with `python scripts/compare_qwen_bge.py` (NumPy required, no inference).
-- [Methods and downloads](https://gregorytsai.github.io/zh-en-retrieval-benchmark/en/latest-methods.html)
-- [Current comparison JSON](data/matrix/current-comparison.json), [147-row corrected CSV](data/matrix/current-summary.csv): 140 five-task rows and seven standalone ACORD rows
-- [Corrected ACORD summary/provenance](data/matrix/acord-corrected.json), [all 399 judged rankings](downloads/acord-corrected-rankings.zip), [truncated-pool diagnostics](data/matrix/acord-diagnostic.json)
-- [Timing audit](data/matrix/timing-audit.json): all 73,164 original totals exactly equal query embedding + vector search + selected reranker. Cold loading, indexing, network, queuing and answer generation are excluded.
-- Preserved original [168-row summary](data/matrix/summary.csv), [analysis JSON](data/matrix/analysis.json), [arithmetic audit](data/matrix/independent-audit.json), seven `downloads/matrix-B01-results.zip` through `matrix-B07-results.zip` archives and [shared qrels](downloads/matrix-shared.zip)
-- [Full code](downloads/matrix-code.zip), [frozen materials](downloads/phase2-materials.zip), [release hashes](data/SHA256SUMS.json)
+- [Methods and downloads](https://gregorytsai.github.io/zh-en-retrieval-benchmark/en/latest-methods.html), [ACORD results](https://gregorytsai.github.io/zh-en-retrieval-benchmark/en/acord.html).
+- [ACORD retest ZIP](downloads/acord-retest-20261027.zip): 103 allowlisted files including code, licensed frozen materials, full rankings, 59,850 pair scores, 1,596 query results and timing evidence.
+- [Publication validation](data/acord/publication-validation.json), [ACORD CSV](data/acord/summary.csv), [normalized site data](data/acord/retest.json).
+- [Current comparison JSON](data/matrix/current-comparison.json), [168 current task rows](data/matrix/current-summary.csv).
+- [Original matrix code](downloads/matrix-code.zip), seven matrix-B01-results.zip through matrix-B07-results.zip archives in downloads/, [shared qrels](downloads/matrix-shared.zip), [frozen materials](downloads/phase2-materials.zip), [release hashes](data/SHA256SUMS.json).
 
-Run `python scripts/verify_correction.py` for current metrics and payloads, and `python scripts/verify_matrix.py` for preserved raw scores. Both use the standard library, with no inference or network. `python scripts/recompute_acord.py CACHE_ROOT` replays original vector caches with NumPy; vectors are not redistributed. Full judged rank evidence supports independent arithmetic verification. Build with `python scripts/build_site.py`; package with `python scripts/package_release.py`.
+Run `python scripts/verify_current.py` for independent legal scoring and six-/five-task payload checks. Extract the ACORD ZIP and run `python -m src.independent_validate .` for additional candidate-generation, source-evidence and request-trace checks. Neither command runs models. Build with `python scripts/build_site.py`, package with `python scripts/package_release.py`, then run `python scripts/verify_release.py`.
 
-The original 2,613 dataset-qualified questions are reused across 28 setups, yielding 73,164 measurements, not independent subjects. The five-task mean uses 2,556 questions per setup. No global confidence intervals or multiplicity adjustment were computed. MIRACL uses a bounded dev-judged corpus union, not the full corpus.
+Publication checks verified 102 payload hashes, identical frozen queries/corpus/qrels and ten model-weight pins. Independent validation found no missing, duplicate, nonfinite or accepted-error rows. The source reports 107 tests passing on macOS. Windows rechecking passed 87 tests; seven test modules could not import Unix fcntl dependencies. Full controller tests require macOS/Unix. Historical runtime libraries do not all have comparable hashes. There are 69 documented historical judged-tail differences, all beyond Top50, including four above the diagnostic epsilon; their cause is unresolved.
 
-MLQA: CC BY-SA 3.0. ACORD: CC BY 4.0. MIRACL topics/qrels: Apache 2.0. MIRACL passage text is reconstructed from pinned upstream sources rather than rehosted. Code: MIT. Model weights and private runtime logs are excluded.
+Original-five bootstrap intervals remain restricted to those tasks. ACORD source-query clustering was not established, so no legal bootstrap or global significance claim is made. This is not a production stress test or fixed 30-query × 3-repeat latency test. Weight-file GiB is not measured RAM/VRAM. The archived report treats ACORD separately; this website adds the verified six-task index without rewriting the archive.
+
+MLQA: CC BY-SA 3.0. ACORD: CC BY 4.0, revision 7ba1c6f2e0baaa32e78c78c2b02e9c57b102af4e. MIRACL topics/qrels: Apache 2.0; passage text retains upstream terms. Code: MIT. Weights, vectors, credentials and full private runtime logs are excluded.
 
 聯絡 / Contact: [gregorytsai@gmail.com](mailto:gregorytsai@gmail.com)
